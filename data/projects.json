@@ -221,24 +221,27 @@
     },
     "opl": [
       {
+        "id": "OPL-001",
         "module": "Premise Design",
         "title": "Support manual input, batch upload with full overwrite, copy from prior versions",
         "status": "Done",
         "owner": "Chen Chen",
         "date": "2026-06-03",
         "priority": "Low",
-        "description": ""
+        "description": "Support manual input, batch upload with full overwrite, copy from prior versions"
       },
       {
+        "id": "OPL-002",
         "module": "Premise Design",
         "title": "Include version comparison, changed/unchanged counts, cost impact analysis",
         "status": "Done",
         "owner": "Chen Chen",
         "date": "2026-06-03",
         "priority": "Low",
-        "description": ""
+        "description": "Include version comparison, changed/unchanged counts, cost impact analysis"
       },
       {
+        "id": "OPL-003",
         "module": "Premise Design",
         "title": "Provide detailed templates for premise input, export report format",
         "status": "Open",
@@ -248,76 +251,84 @@
         "description": "w/ effective month fields for salary changes"
       },
       {
+        "id": "OPL-004",
         "module": "HC Collection",
         "title": "HC collection process needs FIE system volume input",
         "status": "Done",
         "owner": "Chen Chen",
         "date": "2026-06-02",
         "priority": "Low",
-        "description": ""
+        "description": "HC collection process needs FIE system volume input"
       },
       {
+        "id": "OPL-005",
         "module": "HC Collection",
         "title": "HC Collection - contract type needs introduction",
         "status": "Open",
         "owner": "Gao Xunuo",
         "date": "2026-06-02",
         "priority": "Medium",
-        "description": ""
+        "description": "HC Collection - contract type needs introduction"
       },
       {
+        "id": "OPL-006",
         "module": "HC Collection",
         "title": "HC Collection - Freeze actual HC input",
         "status": "Done",
         "owner": "Chen Chen",
         "date": "2026-06-02",
         "priority": "Low",
-        "description": ""
+        "description": "HC Collection - Freeze actual HC input"
       },
       {
+        "id": "OPL-007",
         "module": "HC Collection",
         "title": "HC Collection - Delete add row function?",
         "status": "Open",
         "owner": "Chen Chen",
         "date": "2026-06-02",
         "priority": "Medium",
-        "description": ""
+        "description": "HC Collection - Delete add row function?"
       },
       {
+        "id": "OPL-008",
         "module": "HC Collection",
         "title": "Add upload guidance text: one upload covers HC, hours, and outsourcing",
         "status": "Open",
         "owner": "Chen Chen",
         "date": "2026-05-29",
         "priority": "Medium",
-        "description": ""
+        "description": "Add upload guidance text: one upload covers HC, hours, and outsourcing"
       },
       {
+        "id": "OPL-009",
         "module": "HC Collection",
         "title": "Confirm data source for actual HC; can it sync into database?",
         "status": "Open",
         "owner": "Gao Xunuo",
         "date": "2026-06-03",
         "priority": "Medium",
-        "description": ""
+        "description": "Confirm data source for actual HC; can it sync into database?"
       },
       {
+        "id": "OPL-010",
         "module": "HC Collection",
         "title": "Evaluate task/confirmation design for 1 input + 2 confirmation parties (CTG BP & HR BP)",
         "status": "Open",
         "owner": "Zhang Zhongwen",
         "date": "2026-06-03",
         "priority": "Medium",
-        "description": ""
+        "description": "Evaluate task/confirmation design for 1 input + 2 confirmation parties (CTG BP & HR BP)"
       },
       {
+        "id": "OPL-011",
         "module": "HC Collection",
         "title": "Historical actual months must be frozen and not editable",
         "status": "Open",
         "owner": "Chen Chen",
         "date": "2026-06-03",
         "priority": "Medium",
-        "description": ""
+        "description": "Historical actual months must be frozen and not editable"
       },
       {
         "id": "OPL-012",
@@ -330,150 +341,165 @@
         "description": "Insert one row of HC per cost center"
       },
       {
+        "id": "OPL-013",
         "module": "Labor Cost Calculation",
         "title": "Labor cost of actual months should take trace back figure",
         "status": "Open",
         "owner": "Chen Chen",
         "date": "2026-06-02",
         "priority": "Medium",
-        "description": ""
+        "description": "Labor cost of actual months should take trace back figure"
       },
       {
+        "id": "OPL-014",
         "module": "Labor Cost Calculation",
         "title": "Add CBS as separate upload base in LC calculation",
         "status": "Open",
         "owner": "Chen Chen",
         "date": "2026-05-29",
         "priority": "Medium",
-        "description": ""
+        "description": "Add CBS as separate upload base in LC calculation"
       },
       {
+        "id": "OPL-015",
         "module": "Labor Cost Calculation",
         "title": "Revise overtime clearing logic (March & September)",
         "status": "Open",
         "owner": "Gao Xunuo",
         "date": "2026-05-29",
         "priority": "Medium",
-        "description": ""
+        "description": "Revise overtime clearing logic (March & September)"
       },
       {
+        "id": "OPL-016",
         "module": "Labor Cost Calculation",
         "title": "Evaluate effort: basic vs advanced labor cost formula configuration",
         "status": "Done",
         "owner": "Zhang Zhongwen",
         "date": "2026-06-03",
         "priority": "Low",
-        "description": ""
+        "description": "3 working days"
       },
       {
+        "id": "OPL-017",
         "module": "Labor Cost Calculation",
         "title": "Redesign fill logic for rolling and non-standard scenarios",
         "status": "Open",
         "owner": "Gao Xunuo",
         "date": "2026-05-29",
         "priority": "Medium",
-        "description": ""
+        "description": "Redesign fill logic for rolling and non-standard scenarios"
       },
       {
+        "id": "OPL-018",
         "module": "SLA Module",
         "title": "QMM/TEF input with separated direct/indirect HC, re-consider key calculation",
         "status": "Open",
         "owner": "Lu Haixia",
         "date": "2026-06-02",
         "priority": "Medium",
-        "description": ""
+        "description": "QMM/TEF input with separated direct/indirect HC, re-consider key calculation"
       },
       {
+        "id": "OPL-019",
         "module": "SLA Module",
         "title": "Provide latest SLA table header structure and field requirements",
         "status": "Open",
         "owner": "Lu Haixia",
         "date": "2026-06-03",
         "priority": "Medium",
-        "description": ""
+        "description": "Provide latest SLA table header structure and field requirements"
       },
       {
+        "id": "OPL-020",
         "module": "SLA Module",
         "title": "Evaluate SLA PDF export vs Excel download & print",
         "status": "Open",
         "owner": "Zhang Zhongwen",
         "date": "2026-06-03",
         "priority": "Medium",
-        "description": ""
+        "description": "Evaluate SLA PDF export vs Excel download & print"
       },
       {
+        "id": "OPL-021",
         "module": "SLA Module",
         "title": "Provide rough effort estimate for optional complex SLA approval workflow",
         "status": "Done",
         "owner": "Zhang Zhongwen",
         "date": "2026-06-03",
         "priority": "Low",
-        "description": ""
+        "description": "at least 15 working days"
       },
       {
+        "id": "OPL-022",
         "module": "SLA Module",
         "title": "SLA HC distribution process needs product delivery volume input",
         "status": "Open",
         "owner": "Lu Haixia",
         "date": "2026-06-02",
         "priority": "Medium",
-        "description": ""
+        "description": "SLA HC distribution process needs product delivery volume input"
       },
       {
+        "id": "OPL-023",
         "module": "Dashboard",
         "title": "Draft dashboard list and estimate chart count for vendor quotation",
         "status": "Open",
         "owner": "Chen Chen",
         "date": "2026-05-29",
         "priority": "Medium",
-        "description": ""
+        "description": "Draft dashboard list and estimate chart count for vendor quotation"
       },
       {
+        "id": "OPL-024",
         "module": "Dashboard",
         "title": "Design HC dashboard views: actual, forecast, average analysis",
         "status": "Open",
         "owner": "Chen Chen",
         "date": "2026-05-29",
         "priority": "Medium",
-        "description": ""
+        "description": "Design HC dashboard views: actual, forecast, average analysis"
       },
       {
+        "id": "OPL-025",
         "module": "Dashboard",
         "title": "Design LC dashboard views by function area: direct, indirect, total",
         "status": "Open",
         "owner": "Chen Chen",
         "date": "2026-05-29",
         "priority": "Medium",
-        "description": ""
+        "description": "Design LC dashboard views by function area: direct, indirect, total"
       },
       {
+        "id": "OPL-026",
         "module": "Dashboard",
         "title": "Schedule follow-up meeting to discuss dashboard content",
         "status": "Done",
         "owner": "Chen Chen",
         "date": "2026-06-02",
         "priority": "Low",
-        "description": ""
+        "description": "Schedule follow-up meeting to discuss dashboard content"
       },
       {
+        "id": "OPL-027",
         "module": "Architecture",
         "title": "LtP-C process is different with BP/CF process, should separately develop",
         "status": "Open",
         "owner": "Chen Chen",
         "date": "2026-06-02",
         "priority": "Medium",
-        "description": ""
+        "description": "LtP-C process is different with BP/CF process, should separately develop"
       },
       {
+        "id": "OPL-028",
         "module": "Architecture",
         "title": "Evaluate effort: simple vs advanced top-down adjustment",
         "status": "Done",
         "owner": "Zhang Zhongwen",
         "date": "2026-06-03",
         "priority": "Low",
-        "description": ""
+        "description": "3 working days"
       }
-
     ],
     "quotation": {
       "totalBudget": "CNY 200,000",
