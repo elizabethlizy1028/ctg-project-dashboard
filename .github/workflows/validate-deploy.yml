@@ -1,0 +1,29 @@
+name: Validate & Deploy Dashboard
+
+on:
+  push:
+    paths:
+      - 'data/projects.json'
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Validate projects.json
+        run: |
+          echo "Validating projects.json..."
+          python3 -c "
+          import json, sys
+          with open('data/projects.json', 'r') as f:
+              data = json.load(f)
+          required = ['name', 'stage', 'progress', 'urgentTasks', 'milestones', 'opl', 'quotation']
+          for pid, proj in data.items():
+              missing = [k for k in required if k not in proj]
+              if missing:
+                  print(f'FAIL Project {pid}: missing fields: {missing}')
+                  sys.exi
