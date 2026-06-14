@@ -1,0 +1,460 @@
+{
+  "hc-interaction": {
+    "name": "HC Interaction",
+    "subtitle": "BP/CF HC Interaction Platform",
+    "description": "Business Partner & Cash Flow HC Interaction platform development with BCSC.",
+    "stage": "development",
+    "stageLabel": "In Progress",
+    "progress": 35,
+    "color": "accent",
+    "icon": "fa-hand-pointer",
+    "members": 5,
+    "lastUpdate": "Jun 13, 2026",
+    "urgentTasks": {
+      "decisions": [
+        {
+          "title": "BCSC Quotation Approval",
+          "priority": "high",
+          "dueDate": "2026-06-12",
+          "description": "Approve BCSC's final quotation of CNY 200,000 for platform development (90.35 person-days)."
+        },
+        {
+          "title": "Project Scope Approval",
+          "priority": "high",
+          "dueDate": "2026-06-12",
+          "description": "BP/CF (LtP-C separate development together w/ investment etc. process)"
+        },
+        {
+          "title": "SLA Approval Process Design",
+          "priority": "high",
+          "dueDate": "2026-06-12",
+          "description": "Complex SLA approval workflow in SMF (15+ working days) vs. simplified email-triggered process."
+        },
+        {
+          "title": "Labor Cost Transparent Configuration",
+          "priority": "medium",
+          "dueDate": "2026-06-12",
+          "description": "Higher-cost transparent configuration vs. simpler hardcoded logic."
+        },
+        {
+          "title": "AI FAQ BOT",
+          "priority": "low",
+          "dueDate": "2026-06-12",
+          "description": "Decide whether to include AI-powered FAQ chatbot"
+        }
+      ],
+      "upcoming": [
+        {
+          "title": "HOD Decision on Project Framework",
+          "owner": "Chen Chen",
+          "dueDate": "2026-06-12",
+          "status": "In Progress",
+          "progress": 30
+        },
+        {
+          "title": "Dashboard Design & Review with Users",
+          "owner": "Chen Chen",
+          "dueDate": "2026-06-15",
+          "status": "In Progress",
+          "progress": 40
+        },
+        {
+          "title": "Organize Upload/Download Templates",
+          "owner": "Chen Chen",
+          "dueDate": "2026-06-15",
+          "status": "In Progress",
+          "progress": 60
+        },
+        {
+          "title": "Communicate FAQ Bot Requirements",
+          "owner": "Chen Chen",
+          "dueDate": "2026-06-20",
+          "status": "Not Started",
+          "progress": 0
+        },
+        {
+          "title": "BCSC Quotation Confirmation",
+          "owner": "Chen Chen",
+          "dueDate": "2026-06-12",
+          "status": "Pending HOD",
+          "progress": 20
+        },
+        {
+          "title": "BRD/PRD Documentation",
+          "owner": "Chen Chen",
+          "dueDate": "2026-06-15",
+          "status": "Draft Complete",
+          "progress": 80
+        }
+      ],
+      "risks": [
+        {
+          "title": "HOD decision delay blocks project start",
+          "impact": "high",
+          "mitigation": "Prepare decision package with clear options; schedule alignment meeting ASAP"
+        },
+        {
+          "title": "P2 Actual HC sync scope undefined (TBD)",
+          "impact": "high",
+          "mitigation": "Clarify with BCSC and data team before contract; budget contingency"
+        },
+        {
+          "title": "P6 Dashboard chart count vague - scope creep risk",
+          "impact": "medium",
+          "mitigation": "Define exact chart list and get sign-off before development"
+        },
+        {
+          "title": "BCSC quotation may increase if TBD items are added",
+          "impact": "high",
+          "mitigation": "Lock scope in contract; define change request process upfront"
+        },
+        {
+          "title": "Timeline pressure - 5 weeks for development is tight",
+          "impact": "medium",
+          "mitigation": "Prioritize P0-P3 for MVP; P4-P6 can follow if needed"
+        }
+      ]
+    },
+    "milestones": {
+      "phases": [
+        {
+          "name": "Preparation",
+          "status": "completed",
+          "date": "May 2026"
+        },
+        {
+          "name": "Alignment",
+          "status": "current",
+          "date": "Jun 2026"
+        },
+        {
+          "name": "Development",
+          "status": "upcoming",
+          "date": "Jul-Aug 2026"
+        },
+        {
+          "name": "UAT & Launch",
+          "status": "upcoming",
+          "date": "Sep 2026"
+        }
+      ],
+      "details": [
+        {
+          "phase": "Preparation",
+          "title": "Project Initiation",
+          "status": "completed",
+          "date": "May 5, 2026",
+          "description": "Project kickoff and team formation"
+        },
+        {
+          "phase": "Preparation",
+          "title": "Requirements Gathering",
+          "status": "completed",
+          "date": "May 12, 2026",
+          "description": "BRD/PRD documentation completed"
+        },
+        {
+          "phase": "Preparation",
+          "title": "Vendor Selection",
+          "status": "completed",
+          "date": "May 20, 2026",
+          "description": "BCSC selected as development vendor"
+        },
+        {
+          "phase": "Preparation",
+          "title": "Quotation Received",
+          "status": "completed",
+          "date": "May 28, 2026",
+          "description": "CNY 200,000 quotation received from BCSC"
+        },
+        {
+          "phase": "Alignment",
+          "title": "Scope align w/ HOD",
+          "status": "in-progress",
+          "date": "Jun 5, 2026",
+          "description": "Pending HOD approval on project scope",
+          "note": "Pending approval"
+        },
+        {
+          "phase": "Alignment",
+          "title": "Contract Signing",
+          "status": "upcoming",
+          "date": "Jun 12, 2026",
+          "description": "Contract signing with BCSC"
+        },
+        {
+          "phase": "Alignment",
+          "title": "Technical Design Review",
+          "status": "upcoming",
+          "date": "Jun 18, 2026",
+          "description": "Review technical design with BCSC team"
+        },
+        {
+          "phase": "Development",
+          "title": "Core Platform Development (P0-P3)",
+          "status": "upcoming",
+          "date": "Jul 1, 2026",
+          "description": "Core features development"
+        },
+        {
+          "phase": "Development",
+          "title": "Extended Features (P4-P6)",
+          "status": "upcoming",
+          "date": "Aug 1, 2026",
+          "description": "Extended features development"
+        },
+        {
+          "phase": "UAT & Launch",
+          "title": "User Acceptance Testing",
+          "status": "upcoming",
+          "date": "Sep 1, 2026",
+          "description": "UAT with business users"
+        },
+        {
+          "phase": "UAT & Launch",
+          "title": "Production Go-live",
+          "status": "upcoming",
+          "date": "Sep 15, 2026",
+          "description": "Deploy to production environment"
+        }
+      ]
+    },
+    "opl": [
+      {
+        "id": "OPL-001",
+        "module": "Dashboard",
+        "title": "BP Dashboard chart list needs to be finalized",
+        "status": "Open",
+        "owner": "Chen Chen",
+        "date": "2026-06-15",
+        "priority": "High",
+        "description": "Define exact chart list to avoid scope creep"
+      },
+      {
+        "id": "OPL-002",
+        "module": "Workflow",
+        "title": "SLA Approval process design decision",
+        "status": "Open",
+        "owner": "Chen Chen",
+        "date": "2026-06-12",
+        "priority": "High",
+        "description": "Complex workflow (15+ days) vs simplified email process"
+      },
+      {
+        "id": "OPL-003",
+        "module": "Configuration",
+        "title": "Labor Cost transparent configuration approach",
+        "status": "Open",
+        "owner": "Chen Chen",
+        "date": "2026-06-12",
+        "priority": "Medium",
+        "description": "Higher-cost transparent config vs hardcoded logic"
+      },
+      {
+        "id": "OPL-004",
+        "module": "Integration",
+        "title": "HC Sync scope undefined - needs clarification",
+        "status": "Open",
+        "owner": "TBD",
+        "date": "2026-06-20",
+        "priority": "High",
+        "description": "Scope TBD with BCSC and data team before contract"
+      },
+      {
+        "id": "OPL-005",
+        "module": "AI",
+        "title": "FAQ Bot inclusion decision",
+        "status": "Open",
+        "owner": "Chen Chen",
+        "date": "2026-06-12",
+        "priority": "Low",
+        "description": "Decide whether to include AI-powered FAQ chatbot"
+      },
+      {
+        "id": "OPL-006",
+        "module": "Contract",
+        "title": "BCSC Quotation final approval",
+        "status": "Open",
+        "owner": "Chen Chen",
+        "date": "2026-06-12",
+        "priority": "High",
+        "description": "Approve CNY 200,000 quotation (90.35 person-days)"
+      },
+      {
+        "id": "OPL-007",
+        "module": "Scope",
+        "title": "LtP-C separate development scope",
+        "status": "Open",
+        "owner": "Chen Chen",
+        "date": "2026-06-12",
+        "priority": "High",
+        "description": "BP/CF (LtP-C separate development together w/ investment process)"
+      },
+      {
+        "id": "OPL-008",
+        "module": "Report",
+        "title": "CF Report template format alignment",
+        "status": "In Progress",
+        "owner": "Chen Chen",
+        "date": "2026-06-15",
+        "priority": "Medium",
+        "description": "Align report template with business requirements"
+      },
+      {
+        "id": "OPL-009",
+        "module": "Function",
+        "title": "Upload/Download template organization",
+        "status": "In Progress",
+        "owner": "Chen Chen",
+        "date": "2026-06-15",
+        "priority": "Medium",
+        "description": "Organize and standardize upload/download templates"
+      },
+      {
+        "id": "OPL-010",
+        "module": "Documentation",
+        "title": "BRD/PRD final review and sign-off",
+        "status": "In Progress",
+        "owner": "Chen Chen",
+        "date": "2026-06-15",
+        "priority": "Medium",
+        "description": "Complete documentation review with stakeholders"
+      },
+      {
+        "id": "OPL-011",
+        "module": "Dashboard",
+        "title": "Dashboard data source mapping",
+        "status": "Not Started",
+        "owner": "TBD",
+        "date": "2026-06-25",
+        "priority": "Medium",
+        "description": "Map data sources for dashboard charts"
+      },
+      {
+        "id": "OPL-012",
+        "module": "Integration",
+        "title": "SMF system integration requirements",
+        "status": "Not Started",
+        "owner": "TBD",
+        "date": "2026-06-30",
+        "priority": "High",
+        "description": "Define integration requirements with SMF system"
+      },
+      {
+        "id": "OPL-013",
+        "module": "Configuration",
+        "title": "User permission and role setup",
+        "status": "Not Started",
+        "owner": "TBD",
+        "date": "2026-07-05",
+        "priority": "Medium",
+        "description": "Define user roles and permission matrix"
+      },
+      {
+        "id": "OPL-014",
+        "module": "Testing",
+        "title": "UAT test case preparation",
+        "status": "Not Started",
+        "owner": "TBD",
+        "date": "2026-07-10",
+        "priority": "Low",
+        "description": "Prepare user acceptance test cases"
+      },
+      {
+        "id": "OPL-015",
+        "module": "Deployment",
+        "title": "Production environment setup",
+        "status": "Not Started",
+        "owner": "TBD",
+        "date": "2026-07-15",
+        "priority": "Medium",
+        "description": "Setup production deployment environment"
+      }
+    ],
+    "quotation": {
+      "totalBudget": "CNY 200,000",
+      "spent": "CNY 0",
+      "remaining": "CNY 200,000",
+      "vendor": "BCSC",
+      "personDays": 90.35,
+      "highEffortItems": [
+        {
+          "name": "P4 SLA Dynamic Header Engine",
+          "effort": "5.0 FE days",
+          "shouldBe": "3.0 FE days",
+          "opinion": "Header config is metadata-driven, not complex UI",
+          "priority": "High"
+        },
+        {
+          "name": "Existing System Dashboard Optimization",
+          "effort": "4.0 FE days",
+          "shouldBe": "1.5-2.0 FE days",
+          "opinion": "Only CSS styling changes (bold/enlarge numbers)",
+          "priority": "High"
+        },
+        {
+          "name": "P2 Actual HC Sync (TBD)",
+          "effort": "Not estimated",
+          "shouldBe": "3-5 days (add to scope)",
+          "opinion": "Scope undefined, not in 90.35 days. Must clarify before contract",
+          "priority": "High"
+        },
+        {
+          "name": "P6 Headcount Dashboard",
+          "effort": "4.5 FE + 4.5 BE days",
+          "shouldBe": "Define exact chart count first",
+          "opinion": "Scope vague: approx 3 pages x 4 charts. Each chart = 0.5-1.0 FE day",
+          "priority": "Medium"
+        },
+        {
+          "name": "P5 Allocation Key PM Effort",
+          "effort": "1.5 PM days",
+          "shouldBe": "0.5-1.0 PM days",
+          "opinion": "Simple calculation module, PM effort overestimated",
+          "priority": "Low"
+        }
+      ]
+    },
+    "documents": [
+      {
+        "title": "BP CF HC Interaction",
+        "type": "pptx",
+        "date": "Jun 2026",
+        "size": "2.4 MB",
+        "pages": 18,
+        "hasPreview": true
+      }
+    ]
+  },
+  "ctg-chatbot": {
+    "name": "CTG ChatBOT",
+    "subtitle": "Intelligent Customer Service Chatbot",
+    "description": "Intelligent customer service chatbot based on LLM for CTG business scenarios.",
+    "stage": "idea",
+    "stageLabel": "Idea",
+    "progress": 5,
+    "color": "yellow",
+    "icon": "fa-robot",
+    "members": 1,
+    "lastUpdate": "Just now",
+    "urgentTasks": {
+      "decisions": [],
+      "upcoming": [],
+      "risks": []
+    },
+    "milestones": {
+      "phases": [],
+      "details": []
+    },
+    "opl": [],
+    "quotation": {
+      "totalBudget": "TBD",
+      "spent": "CNY 0",
+      "remaining": "TBD",
+      "vendor": "TBD",
+      "personDays": "TBD",
+      "highEffortItems": []
+    },
+    "documents": []
+  }
+}
