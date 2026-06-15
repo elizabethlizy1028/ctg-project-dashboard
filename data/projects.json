@@ -5,11 +5,11 @@
     "description": "Business Partner & Cash Flow HC Interaction platform development with BCSC.",
     "stage": "development",
     "stageLabel": "In Progress",
-    "progress": 35,
+    "progress": 30,
     "color": "accent",
     "icon": "fa-hand-pointer",
     "members": 5,
-    "lastUpdate": "Jun 13, 2026",
+    "lastUpdate": "Jun 14, 2026",
     "urgentTasks": {
       "decisions": [
         {
@@ -118,9 +118,14 @@
     "milestones": {
       "phases": [
         {
+          "name": "Initiation",
+          "status": "completed",
+          "date": "May 31, 2026"
+        },
+        {
           "name": "Preparation",
           "status": "completed",
-          "date": "May 2026"
+          "date": "Jun 12, 2026"
         },
         {
           "name": "Alignment",
@@ -130,92 +135,137 @@
         {
           "name": "Development",
           "status": "upcoming",
-          "date": "Jul-Aug 2026"
+          "date": "Aug 7, 2026"
         },
         {
-          "name": "UAT & Launch",
+          "name": "UAT",
           "status": "upcoming",
-          "date": "Sep 2026"
+          "date": "Aug 14, 2026"
+        },
+        {
+          "name": "Training Material",
+          "status": "upcoming",
+          "date": "Aug 21, 2026"
+        },
+        {
+          "name": "Final Release",
+          "status": "upcoming",
+          "date": "Aug 22, 2026"
         }
       ],
       "details": [
         {
-          "phase": "Preparation",
-          "title": "Project Initiation",
+          "phase": "Initiation",
+          "title": "Interviews - Draw Process Map",
           "status": "completed",
-          "date": "May 5, 2026",
-          "description": "Project kickoff and team formation"
+          "date": "May 31, 2026",
+          "description": "Interview stakeholders, draw process map, dig out pain points"
+        },
+        {
+          "phase": "Initiation",
+          "title": "UI Design",
+          "status": "completed",
+          "date": "May 31, 2026",
+          "description": "User interface design for the platform"
         },
         {
           "phase": "Preparation",
-          "title": "Requirements Gathering",
+          "title": "Template & Dashboard Design",
           "status": "completed",
-          "date": "May 12, 2026",
-          "description": "BRD/PRD documentation completed"
+          "date": "Jun 12, 2026",
+          "description": "Design templates and dashboard layout"
         },
         {
           "phase": "Preparation",
-          "title": "Vendor Selection",
+          "title": "OPL Follow Up",
           "status": "completed",
-          "date": "May 20, 2026",
-          "description": "BCSC selected as development vendor"
+          "date": "Jun 12, 2026",
+          "description": "Follow up on all open points"
         },
         {
           "phase": "Preparation",
-          "title": "Quotation Received",
+          "title": "Cost Assessment - BCSC",
           "status": "completed",
-          "date": "May 28, 2026",
-          "description": "CNY 200,000 quotation received from BCSC"
+          "date": "Jun 12, 2026",
+          "description": "Complete cost assessment with BCSC vendor"
         },
         {
           "phase": "Alignment",
-          "title": "Scope align w/ HOD",
+          "title": "Approach Alignment w/ PC",
           "status": "in-progress",
-          "date": "Jun 5, 2026",
-          "description": "Pending HOD approval on project scope",
+          "date": "Jun 3, 2026",
+          "description": "Align development approach with PC team"
+        },
+        {
+          "phase": "Alignment",
+          "title": "Scope Alignment w/ HOD",
+          "status": "in-progress",
+          "date": "Jun 2026",
+          "description": "Get HOD approval on project scope",
           "note": "Pending approval"
         },
         {
-          "phase": "Alignment",
-          "title": "Contract Signing",
+          "phase": "Development",
+          "title": "Platform Development - BCSC",
           "status": "upcoming",
-          "date": "Jun 12, 2026",
-          "description": "Contract signing with BCSC"
-        },
-        {
-          "phase": "Alignment",
-          "title": "Technical Design Review",
-          "status": "upcoming",
-          "date": "Jun 18, 2026",
-          "description": "Review technical design with BCSC team"
+          "date": "Aug 7, 2026",
+          "description": "Core platform development by BCSC vendor"
         },
         {
           "phase": "Development",
-          "title": "Core Platform Development (P0-P3)",
+          "title": "BOT Development for Instruction & FAQ - ICO",
           "status": "upcoming",
-          "date": "Jul 1, 2026",
-          "description": "Core features development"
+          "date": "Aug 7, 2026",
+          "description": "Chatbot development for instructions and FAQ"
         },
         {
-          "phase": "Development",
-          "title": "Extended Features (P4-P6)",
+          "phase": "UAT",
+          "title": "CTG Internal Testing",
           "status": "upcoming",
-          "date": "Aug 1, 2026",
-          "description": "Extended features development"
+          "date": "Aug 14, 2026",
+          "description": "Internal user acceptance testing by CTG team"
         },
         {
-          "phase": "UAT & Launch",
-          "title": "User Acceptance Testing",
+          "phase": "UAT",
+          "title": "Use Department Testing",
           "status": "upcoming",
-          "date": "Sep 1, 2026",
-          "description": "UAT with business users"
+          "date": "Aug 14, 2026",
+          "description": "Testing by business use departments"
         },
         {
-          "phase": "UAT & Launch",
-          "title": "Production Go-live",
+          "phase": "Training Material",
+          "title": "Training Material Preparation",
           "status": "upcoming",
-          "date": "Sep 15, 2026",
-          "description": "Deploy to production environment"
+          "date": "Aug 21, 2026",
+          "description": "Prepare training materials and documentation"
+        },
+        {
+          "phase": "Training Material",
+          "title": "FAQ Documentation",
+          "status": "upcoming",
+          "date": "Aug 21, 2026",
+          "description": "Compile FAQ documentation for end users"
+        },
+        {
+          "phase": "Final Release",
+          "title": "Internal Training",
+          "status": "upcoming",
+          "date": "Aug 22, 2026",
+          "description": "Internal team training sessions"
+        },
+        {
+          "phase": "Final Release",
+          "title": "User Department Training",
+          "status": "upcoming",
+          "date": "Aug 22, 2026",
+          "description": "End user department training"
+        },
+        {
+          "phase": "Final Release",
+          "title": "Final Release & Go-live",
+          "status": "upcoming",
+          "date": "Aug 22, 2026",
+          "description": "Production deployment and go-live"
         }
       ]
     },
