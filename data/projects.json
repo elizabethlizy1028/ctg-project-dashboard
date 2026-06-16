@@ -9,7 +9,7 @@
     "color": "accent",
     "icon": "fa-hand-pointer",
     "members": 5,
-    "lastUpdate": "Jun 14, 2026",
+    "lastUpdate": "Jun 15, 2026",
     "urgentTasks": {
       "decisions": [
         {
@@ -19,16 +19,16 @@
           "description": "Approve BCSC's final quotation of CNY 200,000 for platform development (90.35 person-days)."
         },
         {
-          "title": "Project Scope Approval",
-          "priority": "high",
+          "title": "Project Scope Approval [RESOLVED]",
+          "priority": "low",
           "dueDate": "2026-06-12",
-          "description": "BP/CF (LtP-C separate development together w/ investment etc. process)"
+          "description": "RESOLVED (HOD 6.15): Scope INCLUDES LtP-C. Need process mapping + UI design for LtP-C by Jun 19."
         },
         {
-          "title": "SLA Approval Process Design",
-          "priority": "high",
+          "title": "SLA Approval Process Design [RESOLVED]",
+          "priority": "low",
           "dueDate": "2026-06-12",
-          "description": "Complex SLA approval workflow in SMF (15+ working days) vs. simplified email-triggered process."
+          "description": "RESOLVED (HOD 6.15): SLA does NOT need approval workflow. Service provider is responsible; no task info needed for service receiver."
         },
         {
           "title": "Labor Cost Transparent Configuration",
@@ -48,8 +48,8 @@
           "title": "HOD Decision on Project Framework",
           "owner": "Chen Chen",
           "dueDate": "2026-06-12",
-          "status": "In Progress",
-          "progress": 30
+          "status": "Done",
+          "progress": 100
         },
         {
           "title": "Dashboard Design & Review with Users",
@@ -76,8 +76,8 @@
           "title": "BCSC Quotation Confirmation",
           "owner": "Chen Chen",
           "dueDate": "2026-06-12",
-          "status": "Pending HOD",
-          "progress": 20
+          "status": "Done",
+          "progress": 100
         },
         {
           "title": "BRD/PRD Documentation",
@@ -85,6 +85,20 @@
           "dueDate": "2026-06-15",
           "status": "Draft Complete",
           "progress": 80
+        },
+        {
+          "title": "LtP-C Process Mapping & UI Design",
+          "owner": "Chen Chen",
+          "dueDate": "2026-06-19",
+          "status": "Not Started",
+          "progress": 0
+        },
+        {
+          "title": "Process Mapping Details - All Modules (Input/Effort/Output)",
+          "owner": "Gao Xunuo / Lu Haixia",
+          "dueDate": "2026-06-19",
+          "status": "Not Started",
+          "progress": 0
         }
       ],
       "risks": [
@@ -113,6 +127,34 @@
           "impact": "medium",
           "mitigation": "Prioritize P0-P3 for MVP; P4-P6 can follow if needed"
         }
+      ],
+      "decisionsMade": [
+        {
+          "meetingDate": "2026-06-15",
+          "meetingName": "HOD Alignment Meeting",
+          "decisions": [
+            {
+              "title": "Project scope includes LtP-C",
+              "description": "LtP-C process needs to be included in project scope. Requires process mapping and UI design. Deadline: Jun 19.",
+              "impact": "high"
+            },
+            {
+              "title": "Process mapping details required (Input/Effort/Output format)",
+              "description": "All process mapping must follow Input -> Effort -> Output format with tables, fields, and calculation formulas. Owner: Gao Xunuo / Lu Haixia. Deadline: Jun 19.",
+              "impact": "high"
+            },
+            {
+              "title": "Phase 1 deadline: Aug 5, 2026",
+              "description": "First phase must complete at least the interaction part with user departments. Added milestone: Jul 31 Interaction UAT & Release.",
+              "impact": "high"
+            },
+            {
+              "title": "SLA does not need approval workflow",
+              "description": "SLA module does not require approval process. No task information needed for service receiver. Service provider is responsible for this part.",
+              "impact": "medium"
+            }
+          ]
+        }
       ]
     },
     "milestones": {
@@ -124,18 +166,23 @@
         },
         {
           "name": "Preparation",
-          "status": "completed",
-          "date": "Jun 12, 2026"
+          "status": "in-progress",
+          "date": "Jun 19, 2026"
         },
         {
           "name": "Alignment",
-          "status": "current",
+          "status": "upcoming",
           "date": "Jun 2026"
         },
         {
           "name": "Development",
           "status": "upcoming",
-          "date": "Aug 7, 2026"
+          "date": "Aug 5, 2026"
+        },
+        {
+          "name": "Interaction UAT & Release",
+          "status": "upcoming",
+          "date": "Jul 31, 2026"
         },
         {
           "name": "UAT",
@@ -190,6 +237,24 @@
           "description": "Complete cost assessment with BCSC vendor"
         },
         {
+          "phase": "Preparation",
+          "title": "Process Mapping Details (Input/Effort/Output)",
+          "status": "in-progress",
+          "date": "Jun 19, 2026",
+          "description": "Detailed process mapping for each module: Premise Design, HC Collection, Labor Cost Calculation, SLA, Dashboard. Format: Input -> Effort -> Output with tables, fields, and calculation formulas.",
+          "owner": "Gao Xunuo / Lu Haixia",
+          "note": "HOD meeting 6.15 decision: required before project start"
+        },
+        {
+          "phase": "Preparation",
+          "title": "LtP-C Process Mapping & UI Design",
+          "status": "upcoming",
+          "date": "Jun 19, 2026",
+          "description": "Map LtP-C process details and design UI. LtP-C scope included in project.",
+          "owner": "Chen Chen",
+          "note": "HOD meeting 6.15 decision: LtP-C included in scope"
+        },
+        {
           "phase": "Alignment",
           "title": "Approach Alignment w/ PC",
           "status": "in-progress",
@@ -199,24 +264,38 @@
         {
           "phase": "Alignment",
           "title": "Scope Alignment w/ HOD",
-          "status": "in-progress",
-          "date": "Jun 2026",
-          "description": "Get HOD approval on project scope",
-          "note": "Pending approval"
+          "status": "completed",
+          "date": "Jun 15, 2026",
+          "description": "HOD alignment meeting completed on Jun 15, 2026",
+          "note": "Completed - see Decision Made for outcomes"
         },
         {
           "phase": "Development",
           "title": "Platform Development - BCSC",
           "status": "upcoming",
-          "date": "Aug 7, 2026",
-          "description": "Core platform development by BCSC vendor"
+          "date": "Aug 5, 2026",
+          "description": "Core platform development by BCSC vendor. Phase 1 deadline: Aug 5."
         },
         {
           "phase": "Development",
           "title": "BOT Development for Instruction & FAQ - ICO",
           "status": "upcoming",
-          "date": "Aug 7, 2026",
+          "date": "Aug 5, 2026",
           "description": "Chatbot development for instructions and FAQ"
+        },
+        {
+          "phase": "Interaction UAT & Release",
+          "title": "Interaction Module UAT",
+          "status": "upcoming",
+          "date": "Jul 31, 2026",
+          "description": "User acceptance testing for user department interaction module. Must complete at least the interaction part with user departments."
+        },
+        {
+          "phase": "Interaction UAT & Release",
+          "title": "Interaction Module Release",
+          "status": "upcoming",
+          "date": "Jul 31, 2026",
+          "description": "Release interaction module to user departments"
         },
         {
           "phase": "UAT",
@@ -478,7 +557,8 @@
         "owner": "Zhang Zhongwen",
         "date": "2026-06-03",
         "priority": "Low",
-        "description": "at least 15 working days"
+        "description": "at least 15 working days",
+        "remark": "HOD 6.15 decided: SLA does not need approval workflow"
       },
       {
         "id": "OPL-022",
@@ -488,7 +568,8 @@
         "owner": "Lu Haixia",
         "date": "2026-06-02",
         "priority": "Medium",
-        "description": "SLA HC distribution process needs product delivery volume input"
+        "description": "SLA HC distribution process needs product delivery volume input",
+        "remark": "HOD 6.15 decided: SLA does not need task info for service receiver. Service provider responsible."
       },
       {
         "id": "OPL-023",
