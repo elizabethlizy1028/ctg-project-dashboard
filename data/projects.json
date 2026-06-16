@@ -13,10 +13,10 @@
     "urgentTasks": {
       "decisions": [
         {
-          "title": "BCSC Quotation Approval",
-          "priority": "high",
+          "title": "BCSC Quotation Approval [RESOLVED]",
+          "priority": "low",
           "dueDate": "2026-06-12",
-          "description": "Approve BCSC's final quotation of CNY 200,000 for platform development (90.35 person-days)."
+          "description": "RESOLVED (HOD 6.15): BCSC quotation approved. CNY 200,000 for platform development (90.35 person-days)."
         },
         {
           "title": "Project Scope Approval [RESOLVED]",
