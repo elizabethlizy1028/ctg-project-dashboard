@@ -717,5 +717,367 @@
       "highEffortItems": []
     },
     "documents": []
+  },
+  "apc-tl1": {
+    "name": "APC TL1",
+    "subtitle": "Series Product Cost Breakdown",
+    "description": "Series product cost breakdown and analysis",
+    "stage": "idea",
+    "stageLabel": "Idea",
+    "progress": 5,
+    "color": "yellow",
+    "icon": "fa-chart-line",
+    "members": 1,
+    "lastUpdate": "Jun 16, 2026",
+    "urgentTasks": {
+      "decisions": [],
+      "upcoming": [],
+      "risks": [],
+      "decisionsMade": []
+    },
+    "milestones": {
+      "phases": [],
+      "details": []
+    },
+    "opl": [],
+    "quotation": {
+      "totalBudget": "TBD",
+      "spent": "CNY 0",
+      "remaining": "TBD",
+      "vendor": "TBD",
+      "personDays": "TBD",
+      "highEffortItems": []
+    },
+    "documents": []
+  },
+  "tns-tracking": {
+    "name": "TNS Tracking Dashboard",
+    "subtitle": "Total Net Sales Monitoring",
+    "description": "Total net sales real-time monitoring platform",
+    "stage": "completed",
+    "stageLabel": "Completed",
+    "progress": 100,
+    "color": "accent",
+    "icon": "fa-chart-bar",
+    "members": 3,
+    "lastUpdate": "Jan 2026",
+    "urgentTasks": {
+      "decisions": [],
+      "upcoming": [],
+      "risks": [],
+      "decisionsMade": []
+    },
+    "milestones": {
+      "phases": [
+        {
+          "name": "Completed",
+          "status": "completed",
+          "date": "Jan 2026"
+        }
+      ],
+      "details": [
+        {
+          "phase": "Completed",
+          "title": "Project Completed",
+          "status": "completed",
+          "date": "Jan 2026",
+          "description": "Project successfully delivered"
+        }
+      ]
+    },
+    "opl": [],
+    "quotation": {
+      "totalBudget": "TBD",
+      "spent": "CNY 0",
+      "remaining": "TBD",
+      "vendor": "TBD",
+      "personDays": "TBD",
+      "highEffortItems": []
+    },
+    "documents": []
+  },
+  "budget-release": {
+    "name": "Budget Release and Control",
+    "subtitle": "Department Budget Monitoring",
+    "description": "Streamlined department fix budget monitoring with proactive control mechanisms",
+    "stage": "completed",
+    "stageLabel": "Completed",
+    "progress": 100,
+    "color": "accent",
+    "icon": "fa-balance-scale",
+    "members": 3,
+    "lastUpdate": "Mar 2026",
+    "urgentTasks": {
+      "decisions": [],
+      "upcoming": [],
+      "risks": [],
+      "decisionsMade": []
+    },
+    "milestones": {
+      "phases": [
+        {
+          "name": "Completed",
+          "status": "completed",
+          "date": "Mar 2026"
+        }
+      ],
+      "details": [
+        {
+          "phase": "Completed",
+          "title": "Project Completed",
+          "status": "completed",
+          "date": "Mar 2026",
+          "description": "Project successfully delivered"
+        }
+      ]
+    },
+    "opl": [],
+    "quotation": {
+      "totalBudget": "TBD",
+      "spent": "CNY 0",
+      "remaining": "TBD",
+      "vendor": "TBD",
+      "personDays": "TBD",
+      "highEffortItems": []
+    },
+    "documents": []
+  },
+  "central-charge": {
+    "name": "Central Charge Mgm. Sys.",
+    "subtitle": "ZBB Central Charge Management",
+    "description": "ZBB Central Charge Mgm. in RBCD",
+    "stage": "idea",
+    "stageLabel": "Idea",
+    "progress": 5,
+    "color": "yellow",
+    "icon": "fa-server",
+    "members": 1,
+    "lastUpdate": "Jun 16, 2026",
+    "urgentTasks": {
+      "decisions": [],
+      "upcoming": [],
+      "risks": [],
+      "decisionsMade": []
+    },
+    "milestones": {
+      "phases": [],
+      "details": []
+    },
+    "opl": [],
+    "quotation": {
+      "totalBudget": "TBD",
+      "spent": "CNY 0",
+      "remaining": "TBD",
+      "vendor": "TBD",
+      "personDays": "TBD",
+      "highEffortItems": []
+    },
+    "documents": []
+  },
+  "inter-company": {
+    "name": "Inter-Company Charge",
+    "subtitle": "Inter-Company Transaction Management",
+    "description": "Inter-company charge management system",
+    "stage": "completed",
+    "stageLabel": "Completed",
+    "progress": 100,
+    "color": "accent",
+    "icon": "fa-exchange-alt",
+    "members": 2,
+    "lastUpdate": "2026",
+    "urgentTasks": {
+      "decisions": [],
+      "upcoming": [],
+      "risks": [],
+      "decisionsMade": []
+    },
+    "milestones": {
+      "phases": [
+        {
+          "name": "Completed",
+          "status": "completed",
+          "date": "2026"
+        }
+      ],
+      "details": [
+        {
+          "phase": "Completed",
+          "title": "Project Completed",
+          "status": "completed",
+          "date": "2026",
+          "description": "Project successfully delivered"
+        }
+      ]
+    },
+    "opl": [],
+    "quotation": {
+      "totalBudget": "TBD",
+      "spent": "CNY 0",
+      "remaining": "TBD",
+      "vendor": "TBD",
+      "personDays": "TBD",
+      "highEffortItems": []
+    },
+    "documents": []
+  },
+  "sga-rnd": {
+    "name": "SG&A (Incl. RnD)",
+    "subtitle": "SG&A Target Management",
+    "description": "Reach PS deployed SG&A target",
+    "stage": "idea",
+    "stageLabel": "Idea",
+    "progress": 5,
+    "color": "yellow",
+    "icon": "fa-bullseye",
+    "members": 1,
+    "lastUpdate": "Jun 16, 2026",
+    "urgentTasks": {
+      "decisions": [],
+      "upcoming": [],
+      "risks": [],
+      "decisionsMade": []
+    },
+    "milestones": {
+      "phases": [],
+      "details": []
+    },
+    "opl": [],
+    "quotation": {
+      "totalBudget": "TBD",
+      "spent": "CNY 0",
+      "remaining": "TBD",
+      "vendor": "TBD",
+      "personDays": "TBD",
+      "highEffortItems": []
+    },
+    "documents": []
+  },
+  "investment-tracking": {
+    "name": "Investment Tracking Sys.",
+    "subtitle": "Investment Monitoring Platform",
+    "description": "Investment tracking and monitoring system",
+    "stage": "idea",
+    "stageLabel": "Idea",
+    "progress": 5,
+    "color": "yellow",
+    "icon": "fa-coins",
+    "members": 1,
+    "lastUpdate": "Jun 16, 2026",
+    "urgentTasks": {
+      "decisions": [],
+      "upcoming": [],
+      "risks": [],
+      "decisionsMade": []
+    },
+    "milestones": {
+      "phases": [],
+      "details": []
+    },
+    "opl": [],
+    "quotation": {
+      "totalBudget": "TBD",
+      "spent": "CNY 0",
+      "remaining": "TBD",
+      "vendor": "TBD",
+      "personDays": "TBD",
+      "highEffortItems": []
+    },
+    "documents": []
+  },
+  "tech-rpp": {
+    "name": "Tech. RPP",
+    "subtitle": "Technology Resource Planning",
+    "description": "Technology resource planning platform",
+    "stage": "idea",
+    "stageLabel": "Idea",
+    "progress": 5,
+    "color": "yellow",
+    "icon": "fa-microchip",
+    "members": 1,
+    "lastUpdate": "Jun 16, 2026",
+    "urgentTasks": {
+      "decisions": [],
+      "upcoming": [],
+      "risks": [],
+      "decisionsMade": []
+    },
+    "milestones": {
+      "phases": [],
+      "details": []
+    },
+    "opl": [],
+    "quotation": {
+      "totalBudget": "TBD",
+      "spent": "CNY 0",
+      "remaining": "TBD",
+      "vendor": "TBD",
+      "personDays": "TBD",
+      "highEffortItems": []
+    },
+    "documents": []
+  },
+  "project-assessment": {
+    "name": "Project Assessment",
+    "subtitle": "Project Evaluation Framework",
+    "description": "Project assessment and evaluation system",
+    "stage": "idea",
+    "stageLabel": "Idea",
+    "progress": 5,
+    "color": "yellow",
+    "icon": "fa-clipboard-check",
+    "members": 1,
+    "lastUpdate": "Jun 16, 2026",
+    "urgentTasks": {
+      "decisions": [],
+      "upcoming": [],
+      "risks": [],
+      "decisionsMade": []
+    },
+    "milestones": {
+      "phases": [],
+      "details": []
+    },
+    "opl": [],
+    "quotation": {
+      "totalBudget": "TBD",
+      "spent": "CNY 0",
+      "remaining": "TBD",
+      "vendor": "TBD",
+      "personDays": "TBD",
+      "highEffortItems": []
+    },
+    "documents": []
+  },
+  "fast-close": {
+    "name": "Fast Close",
+    "subtitle": "AI Enhanced Month End Closing",
+    "description": "AI enhanced month end closing system for faster financial reporting",
+    "stage": "idea",
+    "stageLabel": "Idea",
+    "progress": 5,
+    "color": "yellow",
+    "icon": "fa-rocket",
+    "members": 1,
+    "lastUpdate": "Jun 16, 2026",
+    "urgentTasks": {
+      "decisions": [],
+      "upcoming": [],
+      "risks": [],
+      "decisionsMade": []
+    },
+    "milestones": {
+      "phases": [],
+      "details": []
+    },
+    "opl": [],
+    "quotation": {
+      "totalBudget": "TBD",
+      "spent": "CNY 0",
+      "remaining": "TBD",
+      "vendor": "TBD",
+      "personDays": "TBD",
+      "highEffortItems": []
+    },
+    "documents": []
   }
 }
