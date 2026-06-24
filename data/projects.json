@@ -685,7 +685,8 @@
         "pages": 18,
         "hasPreview": true
       }
-    ]
+    ],
+    "leader": "Chen Chen"
   },
   "ctg-chatbot": {
     "name": "CTG ChatBOT",
@@ -716,7 +717,8 @@
       "personDays": "TBD",
       "highEffortItems": []
     },
-    "documents": []
+    "documents": [],
+    "leader": "Chen Chen"
   },
   "apc-tl1": {
     "name": "APC TL1",
@@ -748,7 +750,8 @@
       "personDays": "TBD",
       "highEffortItems": []
     },
-    "documents": []
+    "documents": [],
+    "leader": "CTG1"
   },
   "tns-tracking": {
     "name": "TNS Tracking Dashboard",
@@ -794,7 +797,8 @@
       "personDays": "TBD",
       "highEffortItems": []
     },
-    "documents": []
+    "documents": [],
+    "leader": "Chen Chen"
   },
   "budget-release": {
     "name": "Budget Release and Control",
@@ -840,16 +844,17 @@
       "personDays": "TBD",
       "highEffortItems": []
     },
-    "documents": []
+    "documents": [],
+    "leader": "Chen Chen"
   },
   "central-charge": {
     "name": "Central Charge Mgm. Sys.",
     "subtitle": "ZBB Central Charge Management",
     "description": "ZBB Central Charge Mgm. in RBCD",
-    "stage": "idea",
-    "stageLabel": "Idea",
-    "progress": 5,
-    "color": "yellow",
+    "stage": "development",
+    "stageLabel": "In Progress",
+    "progress": 15,
+    "color": "accent",
     "icon": "fa-server",
     "members": 1,
     "lastUpdate": "Jun 16, 2026",
@@ -872,7 +877,8 @@
       "personDays": "TBD",
       "highEffortItems": []
     },
-    "documents": []
+    "documents": [],
+    "leader": "Li Qinglin"
   },
   "inter-company": {
     "name": "Inter-Company Charge",
@@ -918,16 +924,17 @@
       "personDays": "TBD",
       "highEffortItems": []
     },
-    "documents": []
+    "documents": [],
+    "leader": "Gao Xunuo"
   },
   "sga-rnd": {
     "name": "SG&A (Incl. RnD)",
     "subtitle": "SG&A Target Management",
     "description": "Reach PS deployed SG&A target",
-    "stage": "idea",
-    "stageLabel": "Idea",
-    "progress": 5,
-    "color": "yellow",
+    "stage": "development",
+    "stageLabel": "In Progress",
+    "progress": 10,
+    "color": "accent",
     "icon": "fa-bullseye",
     "members": 1,
     "lastUpdate": "Jun 16, 2026",
@@ -950,7 +957,8 @@
       "personDays": "TBD",
       "highEffortItems": []
     },
-    "documents": []
+    "documents": [],
+    "leader": "Ye Yanyan"
   },
   "investment-tracking": {
     "name": "Investment Tracking Sys.",
@@ -982,7 +990,8 @@
       "personDays": "TBD",
       "highEffortItems": []
     },
-    "documents": []
+    "documents": [],
+    "leader": "Gao Xunuo"
   },
   "tech-rpp": {
     "name": "Tech. RPP",
@@ -1014,7 +1023,8 @@
       "personDays": "TBD",
       "highEffortItems": []
     },
-    "documents": []
+    "documents": [],
+    "leader": "Pending"
   },
   "project-assessment": {
     "name": "Project Assessment",
@@ -1046,7 +1056,8 @@
       "personDays": "TBD",
       "highEffortItems": []
     },
-    "documents": []
+    "documents": [],
+    "leader": "Pending"
   },
   "fast-close": {
     "name": "Fast Close",
@@ -1078,6 +1089,7 @@
       "personDays": "TBD",
       "highEffortItems": []
     },
-    "documents": []
+    "documents": [],
+    "leader": "Chen Chen"
   }
 }
