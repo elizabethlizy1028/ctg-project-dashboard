@@ -150,16 +150,36 @@ tailwind.config = {
           <select id="filterLeader" class="text-sm bg-white border border-gray-200 rounded-lg px-3 py-1.5 focus:outline-none focus:border-primary-500" onchange="applyProjectFilters()">
             <option value="all">All Leaders</option>
           </select>
+          <select id="filterMonth" class="text-sm bg-white border border-gray-200 rounded-lg px-3 py-1.5 focus:outline-none focus:border-primary-500" onchange="applyProjectFilters()">
+            <option value="all">All Months</option>
+            <option value="2026-01">Jan 2026</option>
+            <option value="2026-02">Feb 2026</option>
+            <option value="2026-03">Mar 2026</option>
+            <option value="2026-04">Apr 2026</option>
+            <option value="2026-05">May 2026</option>
+            <option value="2026-06">Jun 2026</option>
+            <option value="2026-07">Jul 2026</option>
+            <option value="2026-08">Aug 2026</option>
+            <option value="2026-09">Sep 2026</option>
+            <option value="2026-10">Oct 2026</option>
+            <option value="2026-11">Nov 2026</option>
+            <option value="2026-12">Dec 2026</option>
+          </select>
           <select id="sortBy" class="text-sm bg-white border border-gray-200 rounded-lg px-3 py-1.5 focus:outline-none focus:border-primary-500" onchange="applyProjectFilters()">
             <option value="status">Sort by Status</option>
             <option value="name">Sort by Name</option>
             <option value="progress">Sort by Progress</option>
+          </select>
+          <select id="sortOrder" class="text-sm bg-white border border-gray-200 rounded-lg px-3 py-1.5 focus:outline-none focus:border-primary-500" onchange="applyProjectFilters()">
+            <option value="asc">Ascending</option>
+            <option value="desc">Descending</option>
           </select>
         </div>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 mb-8" id="overviewProjectCards" data-dynamic="true">
         <!-- Project cards will be dynamically loaded here -->
       </div>
+    </div>
 
     <!-- Project Detail View -->
     <div id="projectDetailView" class="hidden section-fade">
@@ -722,22 +742,59 @@ function applyProjectFilters() {
   const statusFilter = document.getElementById('filterStatus')?.value || 'active';
   const leaderFilter = document.getElementById('filterLeader')?.value || 'all';
   const sortBy = document.getElementById('sortBy')?.value || 'status';
+  const sortOrder = document.getElementById('sortOrder')?.value || 'asc';
+  const monthFilter = document.getElementById('filterMonth')?.value || 'all';
   
   // Filter projects
   let filtered = Object.entries(projects).filter(([pid, proj]) => {
     const nameMatch = !searchText || proj.name.toLowerCase().includes(searchText) || (proj.description || '').toLowerCase().includes(searchText);
     const statusMatch = statusFilter === 'all' || (statusFilter === 'active' && proj.stage !== 'completed') || proj.stage === statusFilter;
     const leaderMatch = leaderFilter === 'all' || (proj.leader || 'N/A') === leaderFilter;
-    return nameMatch && statusMatch && leaderMatch;
+    // Month filter: show projects with deadline in or before the selected month
+    let monthMatch = true;
+    if (monthFilter !== 'all') {
+      // Get project deadline from milestones or lastUpdate
+      let deadline = '';
+      if (proj.milestones && proj.milestones.phases && proj.milestones.phases.length > 0) {
+        // Find the last upcoming phase date
+        const upcoming = proj.milestones.phases.filter(p => p.status === 'upcoming' || p.status === 'current');
+        if (upcoming.length > 0) {
+          deadline = upcoming[upcoming.length - 1].date || '';
+        } else {
+          deadline = proj.milestones.phases[proj.milestones.phases.length - 1].date || '';
+        }
+      }
+      if (!deadline) deadline = proj.lastUpdate || '';
+      // Parse deadline - extract year-month
+      const dateMatch = deadline.match(/(2026|2025|2024)[\s\/-](\d{1,2})|(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\s+(2026|2025|2024)/i);
+      if (dateMatch) {
+        let year, month;
+        if (dateMatch[1]) {
+          year = dateMatch[1];
+          month = parseInt(dateMatch[2]);
+        } else {
+          const monthMap = {'Jan':1,'Feb':2,'Mar':3,'Apr':4,'May':5,'Jun':6,'Jul':7,'Aug':8,'Sep':9,'Oct':10,'Nov':11,'Dec':12};
+          year = dateMatch[4];
+          month = monthMap[dateMatch[3].charAt(0).toUpperCase() + dateMatch[3].slice(1).toLowerCase()];
+        }
+        const projYearMonth = year + '-' + String(month).padStart(2, '0');
+        // Show if project deadline is in or before the selected month
+        monthMatch = projYearMonth <= monthFilter;
+      } else {
+        monthMatch = false;
+      }
+    }
+    return nameMatch && statusMatch && leaderMatch && monthMatch;
   });
   
   // Sort projects
   const statusOrder = { development: 0, planning: 1, idea: 2, completed: 3 };
   filtered.sort((a, b) => {
-    if (sortBy === 'name') return a[1].name.localeCompare(b[1].name);
-    if (sortBy === 'progress') return b[1].progress - a[1].progress;
-    // Default: sort by status
-    return (statusOrder[a[1].stage] || 9) - (statusOrder[b[1].stage] || 9);
+    let result = 0;
+    if (sortBy === 'name') result = a[1].name.localeCompare(b[1].name);
+    else if (sortBy === 'progress') result = a[1].progress - b[1].progress;
+    else result = (statusOrder[a[1].stage] || 9) - (statusOrder[b[1].stage] || 9);
+    return sortOrder === 'desc' ? -result : result;
   });
   
   const stageColors = { idea: 'yellow', planning: 'blue', development: 'accent', completed: 'blue' };
