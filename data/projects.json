@@ -171,7 +171,7 @@
         },
         {
           "name": "Alignment",
-          "status": "upcoming",
+          "status": "completed",
           "date": "Jun 2026"
         },
         {
@@ -248,17 +248,16 @@
         {
           "phase": "Alignment",
           "title": "Approach Alignment w/ PC",
-          "status": "in-progress",
+          "status": "completed",
           "date": "Jun 3, 2026",
-          "description": "Align development approach with PC team"
+          "description": "Approach aligned with PC team"
         },
         {
           "phase": "Alignment",
           "title": "Scope Alignment w/ HOD",
           "status": "completed",
           "date": "Jun 15, 2026",
-          "description": "HOD alignment meeting completed on Jun 15, 2026",
-          "note": "Completed - see Decision Made for outcomes"
+          "description": "HOD scope alignment completed"
         },
         {
           "phase": "Development",
@@ -710,7 +709,8 @@
       "highEffortItems": []
     },
     "documents": [],
-    "leader": "Chen Chen"
+    "leader": "Chen Chen",
+    "deadline": "2026-09-30"
   },
   "apc-tl1": {
     "name": "APC TL1",
@@ -743,7 +743,8 @@
       "highEffortItems": []
     },
     "documents": [],
-    "leader": "CTG1"
+    "leader": "CTG1",
+    "deadline": "2026-12-31"
   },
   "tns-tracking": {
     "name": "TNS Tracking Dashboard",
@@ -790,7 +791,8 @@
       "highEffortItems": []
     },
     "documents": [],
-    "leader": "Chen Chen"
+    "leader": "Chen Chen",
+    "deadline": "2026-01-31"
   },
   "budget-release": {
     "name": "Budget Release and Control",
@@ -837,7 +839,8 @@
       "highEffortItems": []
     },
     "documents": [],
-    "leader": "Chen Chen"
+    "leader": "Chen Chen",
+    "deadline": "2026-03-17"
   },
   "central-charge": {
     "name": "Central Charge Mgm. Sys.",
@@ -986,7 +989,8 @@
       "highEffortItems": []
     },
     "documents": [],
-    "leader": "Gao Xunuo"
+    "leader": "Gao Xunuo",
+    "deadline": "2026-12-31"
   },
   "tech-rpp": {
     "name": "Tech. RPP",
@@ -1019,7 +1023,8 @@
       "highEffortItems": []
     },
     "documents": [],
-    "leader": "Pending"
+    "leader": "Pending",
+    "deadline": "2026-12-31"
   },
   "project-assessment": {
     "name": "Project Assessment",
@@ -1052,7 +1057,8 @@
       "highEffortItems": []
     },
     "documents": [],
-    "leader": "Pending"
+    "leader": "Pending",
+    "deadline": "2026-12-31"
   },
   "fast-close": {
     "name": "Fast Close",
@@ -1085,6 +1091,7 @@
       "highEffortItems": []
     },
     "documents": [],
-    "leader": "Chen Chen"
+    "leader": "Chen Chen",
+    "deadline": "2026-12-31"
   }
 }
