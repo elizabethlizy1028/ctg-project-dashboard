@@ -150,20 +150,26 @@ tailwind.config = {
           <select id="filterLeader" class="text-sm bg-white border border-gray-200 rounded-lg px-3 py-1.5 focus:outline-none focus:border-primary-500" onchange="applyProjectFilters()">
             <option value="all">All Leaders</option>
           </select>
+          <select id="filterYear" class="text-sm bg-white border border-gray-200 rounded-lg px-3 py-1.5 focus:outline-none focus:border-primary-500" onchange="applyProjectFilters()">
+            <option value="all">All Years</option>
+            <option value="2026">2026</option>
+            <option value="2025">2025</option>
+            <option value="2027">2027</option>
+          </select>
           <select id="filterMonth" class="text-sm bg-white border border-gray-200 rounded-lg px-3 py-1.5 focus:outline-none focus:border-primary-500" onchange="applyProjectFilters()">
             <option value="all">All Months</option>
-            <option value="2026-01">Jan 2026</option>
-            <option value="2026-02">Feb 2026</option>
-            <option value="2026-03">Mar 2026</option>
-            <option value="2026-04">Apr 2026</option>
-            <option value="2026-05">May 2026</option>
-            <option value="2026-06">Jun 2026</option>
-            <option value="2026-07">Jul 2026</option>
-            <option value="2026-08">Aug 2026</option>
-            <option value="2026-09">Sep 2026</option>
-            <option value="2026-10">Oct 2026</option>
-            <option value="2026-11">Nov 2026</option>
-            <option value="2026-12">Dec 2026</option>
+            <option value="01">Jan</option>
+            <option value="02">Feb</option>
+            <option value="03">Mar</option>
+            <option value="04">Apr</option>
+            <option value="05">May</option>
+            <option value="06">Jun</option>
+            <option value="07">Jul</option>
+            <option value="08">Aug</option>
+            <option value="09">Sep</option>
+            <option value="10">Oct</option>
+            <option value="11">Nov</option>
+            <option value="12">Dec</option>
           </select>
           <select id="sortBy" class="text-sm bg-white border border-gray-200 rounded-lg px-3 py-1.5 focus:outline-none focus:border-primary-500" onchange="applyProjectFilters()">
             <option value="status">Sort by Status</option>
@@ -744,47 +750,71 @@ function applyProjectFilters() {
   const sortBy = document.getElementById('sortBy')?.value || 'status';
   const sortOrder = document.getElementById('sortOrder')?.value || 'asc';
   const monthFilter = document.getElementById('filterMonth')?.value || 'all';
+  const yearFilter = document.getElementById('filterYear')?.value || 'all';
   
   // Filter projects
   let filtered = Object.entries(projects).filter(([pid, proj]) => {
     const nameMatch = !searchText || proj.name.toLowerCase().includes(searchText) || (proj.description || '').toLowerCase().includes(searchText);
     const statusMatch = statusFilter === 'all' || (statusFilter === 'active' && proj.stage !== 'completed') || proj.stage === statusFilter;
     const leaderMatch = leaderFilter === 'all' || (proj.leader || 'N/A') === leaderFilter;
-    // Month filter: show projects with deadline in or before the selected month
-    let monthMatch = true;
-    if (monthFilter !== 'all') {
-      // Get project deadline from milestones or lastUpdate
-      let deadline = '';
-      if (proj.milestones && proj.milestones.phases && proj.milestones.phases.length > 0) {
-        // Find the last upcoming phase date
-        const upcoming = proj.milestones.phases.filter(p => p.status === 'upcoming' || p.status === 'current');
-        if (upcoming.length > 0) {
-          deadline = upcoming[upcoming.length - 1].date || '';
-        } else {
-          deadline = proj.milestones.phases[proj.milestones.phases.length - 1].date || '';
+    // Year + Month filter: show projects with deadline in or before the selected year-month
+    let dateMatch = true;
+    if (yearFilter !== 'all' || monthFilter !== 'all') {
+      // Get project deadline
+      let deadline = proj.deadline || '';
+      if (!deadline) {
+        // Fallback: try to get from milestones
+        if (proj.milestones && proj.milestones.phases && proj.milestones.phases.length > 0) {
+          const upcoming = proj.milestones.phases.filter(p => p.status === 'upcoming' || p.status === 'current');
+          if (upcoming.length > 0) {
+            deadline = upcoming[upcoming.length - 1].date || '';
+          } else {
+            deadline = proj.milestones.phases[proj.milestones.phases.length - 1].date || '';
+          }
         }
       }
       if (!deadline) deadline = proj.lastUpdate || '';
-      // Parse deadline - extract year-month
-      const dateMatch = deadline.match(/(2026|2025|2024)[\s\/-](\d{1,2})|(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\s+(2026|2025|2024)/i);
-      if (dateMatch) {
-        let year, month;
-        if (dateMatch[1]) {
-          year = dateMatch[1];
-          month = parseInt(dateMatch[2]);
-        } else {
-          const monthMap = {'Jan':1,'Feb':2,'Mar':3,'Apr':4,'May':5,'Jun':6,'Jul':7,'Aug':8,'Sep':9,'Oct':10,'Nov':11,'Dec':12};
-          year = dateMatch[4];
-          month = monthMap[dateMatch[3].charAt(0).toUpperCase() + dateMatch[3].slice(1).toLowerCase()];
-        }
-        const projYearMonth = year + '-' + String(month).padStart(2, '0');
-        // Show if project deadline is in or before the selected month
-        monthMatch = projYearMonth <= monthFilter;
+      
+      // Parse deadline to get year and month
+      let projYear = '', projMonth = '';
+      // Try YYYY-MM-DD format
+      let m = deadline.match(/(20\d{2})[\s\/-](\d{1,2})/);
+      if (m) {
+        projYear = m[1];
+        projMonth = String(parseInt(m[2])).padStart(2, '0');
       } else {
-        monthMatch = false;
+        // Try "Mon YYYY" or "Mon DD, YYYY" format
+        m = deadline.match(/(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\w*\s+\d{1,2},?\s*(20\d{2})/i);
+        if (m) {
+          const monthMap = {'jan':'01','feb':'02','mar':'03','apr':'04','may':'05','jun':'06','jul':'07','aug':'08','sep':'09','oct':'10','nov':'11','dec':'12'};
+          projYear = m[2];
+          projMonth = monthMap[m[1].toLowerCase()];
+        }
+      }
+      
+      if (projYear && projMonth) {
+        // Check year filter
+        if (yearFilter !== 'all' && projYear !== yearFilter) {
+          dateMatch = false;
+        }
+        // Check month filter (deadline in or before this month)
+        if (dateMatch && monthFilter !== 'all') {
+          const selectedYM = parseInt(monthFilter);
+          const projYM = parseInt(projMonth);
+          // If year is selected, compare within that year
+          // If year is 'all', just compare months
+          if (yearFilter !== 'all') {
+            dateMatch = projYM <= selectedYM;
+          } else {
+            // Year is 'all' - just match the month regardless of year
+            dateMatch = projYM <= selectedYM;
+          }
+        }
+      } else {
+        dateMatch = false;
       }
     }
-    return nameMatch && statusMatch && leaderMatch && monthMatch;
+    return nameMatch && statusMatch && leaderMatch && dateMatch;
   });
   
   // Sort projects
@@ -809,7 +839,8 @@ function applyProjectFilters() {
       const topBarColor = isIdea ? 'from-yellow-400 to-orange-400' : isCompleted ? 'from-blue-400 to-blue-600' : 'from-accent-400 to-accent-600';
       const iconBg = isIdea ? 'from-yellow-400 to-orange-400' : isCompleted ? 'from-blue-400 to-blue-600' : 'from-accent-400 to-accent-600';
       const stageBadge = isIdea ? '<span class="stage-idea inline-flex items-center gap-1 text-xs bg-yellow-100 text-yellow-700 px-2 py-0.5 rounded-full font-semibold"><i class="fas fa-lightbulb text-[10px]"></i>Idea</span>' : isCompleted ? '<span class="inline-flex items-center gap-1 text-xs bg-blue-100 text-blue-700 px-2 py-0.5 rounded-full font-semibold"><i class="fas fa-check text-[10px]"></i>Completed</span>' : '<span class="inline-flex items-center gap-1 text-xs bg-accent-100 text-accent-700 px-2 py-0.5 rounded-full font-semibold"><i class="fas fa-spinner text-[10px]"></i>In Progress</span>';
-      const dateInfo = isCompleted ? `<span class="text-xs text-blue-600 font-medium">${proj.lastUpdate}</span>` : isIdea ? `<span class="text-xs text-yellow-600 font-medium">To be launched</span>` : `<span class="text-xs text-gray-500">${proj.lastUpdate}</span>`;
+      const deadline = proj.deadline || proj.lastUpdate || 'TBD';
+      const dateInfo = isCompleted ? `<span class="text-xs text-blue-600 font-medium"><i class="fas fa-check-circle text-[10px] mr-1"></i>${deadline}</span>` : isIdea ? `<span class="text-xs text-yellow-600 font-medium"><i class="fas fa-flag text-[10px] mr-1"></i>${deadline}</span>` : `<span class="text-xs text-gray-500"><i class="fas fa-calendar text-[10px] mr-1"></i>${deadline}</span>`;
       const leader = proj.leader || 'N/A';
       const leaderIcon = leader === 'Pending' ? 'fa-user-clock text-gray-400' : 'fa-user text-gray-500';
       
@@ -830,7 +861,7 @@ function applyProjectFilters() {
           </div>
           <div class="flex items-center justify-between pt-3 border-t border-gray-100">
             <div class="flex items-center gap-1 text-xs text-gray-500"><i class="fas ${leaderIcon} text-[10px]"></i><span>${leader}</span></div>
-            ${dateInfo}
+            <div class="flex items-center gap-1"><span class="text-[10px] text-gray-400">Deadline:</span>${dateInfo}</div>
           </div>
         </div>
       </div>`;
