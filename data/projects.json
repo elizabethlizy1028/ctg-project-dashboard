@@ -246,15 +246,6 @@
           "note": "HOD meeting 6.15 decision: required before project start"
         },
         {
-          "phase": "Preparation",
-          "title": "LtP-C Process Mapping & UI Design",
-          "status": "upcoming",
-          "date": "Jun 19, 2026",
-          "description": "Map LtP-C process details and design UI. LtP-C scope included in project.",
-          "owner": "Chen Chen",
-          "note": "HOD meeting 6.15 decision: LtP-C included in scope"
-        },
-        {
           "phase": "Alignment",
           "title": "Approach Alignment w/ PC",
           "status": "in-progress",
@@ -686,7 +677,8 @@
         "hasPreview": true
       }
     ],
-    "leader": "Chen Chen"
+    "leader": "Chen Chen",
+    "deadline": "2026-08-22"
   },
   "ctg-chatbot": {
     "name": "CTG ChatBOT",
@@ -724,10 +716,10 @@
     "name": "APC TL1",
     "subtitle": "Series Product Cost Breakdown",
     "description": "Series product cost breakdown and analysis",
-    "stage": "idea",
-    "stageLabel": "Idea",
-    "progress": 5,
-    "color": "yellow",
+    "stage": "development",
+    "stageLabel": "In Progress",
+    "progress": 10,
+    "color": "accent",
     "icon": "fa-chart-line",
     "members": 1,
     "lastUpdate": "Jun 16, 2026",
@@ -878,7 +870,8 @@
       "highEffortItems": []
     },
     "documents": [],
-    "leader": "Li Qinglin"
+    "leader": "Li Qinglin",
+    "deadline": "2026-06-30"
   },
   "inter-company": {
     "name": "Inter-Company Charge",
@@ -925,7 +918,8 @@
       "highEffortItems": []
     },
     "documents": [],
-    "leader": "Gao Xunuo"
+    "leader": "Gao Xunuo",
+    "deadline": "2026-01-31"
   },
   "sga-rnd": {
     "name": "SG&A (Incl. RnD)",
@@ -958,7 +952,8 @@
       "highEffortItems": []
     },
     "documents": [],
-    "leader": "Ye Yanyan"
+    "leader": "Ye Yanyan",
+    "deadline": "2026-08-31"
   },
   "investment-tracking": {
     "name": "Investment Tracking Sys.",
