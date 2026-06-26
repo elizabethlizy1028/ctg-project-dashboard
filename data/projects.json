@@ -9,14 +9,14 @@
     "color": "accent",
     "icon": "fa-hand-pointer",
     "members": 5,
-    "lastUpdate": "Jun 15, 2026",
+    "lastUpdate": "Jun 16, 2026",
     "urgentTasks": {
       "decisions": [
         {
           "title": "BCSC Quotation Approval [RESOLVED]",
           "priority": "low",
           "dueDate": "2026-06-12",
-          "description": "RESOLVED (HOD 6.15): BCSC quotation approved. CNY 200,000 for platform development (90.35 person-days)."
+          "description": "RESOLVED (HOD 6.15): BCSC quotation approved. Updated to CNY 225,000 for platform development (100.35 person-days). Original price CNY 250,875, discounted 10.3%."
         },
         {
           "title": "Project Scope Approval [RESOLVED]",
@@ -52,13 +52,6 @@
           "progress": 100
         },
         {
-          "title": "Dashboard Design & Review with Users",
-          "owner": "Chen Chen",
-          "dueDate": "2026-06-15",
-          "status": "In Progress",
-          "progress": 40
-        },
-        {
           "title": "Organize Upload/Download Templates",
           "owner": "Chen Chen",
           "dueDate": "2026-06-15",
@@ -76,29 +69,8 @@
           "title": "BCSC Quotation Confirmation",
           "owner": "Chen Chen",
           "dueDate": "2026-06-12",
-          "status": "Done",
-          "progress": 100
-        },
-        {
-          "title": "BRD/PRD Documentation",
-          "owner": "Chen Chen",
-          "dueDate": "2026-06-15",
-          "status": "Draft Complete",
-          "progress": 80
-        },
-        {
-          "title": "LtP-C Process Mapping & UI Design",
-          "owner": "Chen Chen",
-          "dueDate": "2026-06-19",
-          "status": "Not Started",
-          "progress": 0
-        },
-        {
-          "title": "Process Mapping Details - All Modules (Input/Effort/Output)",
-          "owner": "Gao Xunuo / Lu Haixia",
-          "dueDate": "2026-06-19",
-          "status": "Not Started",
-          "progress": 0
+          "status": "In Progress",
+          "progress": 50
         }
       ],
       "risks": [
@@ -623,48 +595,60 @@
       }
     ],
     "quotation": {
-      "totalBudget": "CNY 200,000",
+      "totalBudget": "CNY 225,000",
       "spent": "CNY 0",
-      "remaining": "CNY 200,000",
+      "remaining": "CNY 225,000",
       "vendor": "BCSC",
-      "personDays": 90.35,
+      "personDays": 100.35,
+      "originalPrice": "CNY 250,875",
+      "discountedPrice": "CNY 225,000",
+      "discountRate": "10.3%",
       "highEffortItems": [
         {
+          "name": "P6 SLA Dashboard (图组+表格+警告+long term)",
+          "effort": "3.0 FE + 3.5 BE + 1.0 UI = 7.5 days",
+          "shouldBe": "Consider simplifying SLA chart group",
+          "opinion": "Largest single item. Includes 2 chart groups, filter, table with arrows, key issue warning, and long term. Verify if all features are Phase 1 must-haves.",
+          "priority": "High"
+        },
+        {
           "name": "P4 SLA Dynamic Header Engine",
-          "effort": "5.0 FE days",
-          "shouldBe": "3.0 FE days",
-          "opinion": "Header config is metadata-driven, not complex UI",
-          "priority": "High"
-        },
-        {
-          "name": "Existing System Dashboard Optimization",
-          "effort": "4.0 FE days",
-          "shouldBe": "1.5-2.0 FE days",
-          "opinion": "Only CSS styling changes (bold/enlarge numbers)",
-          "priority": "High"
-        },
-        {
-          "name": "P2 Actual HC Sync (TBD)",
-          "effort": "Not estimated",
-          "shouldBe": "3-5 days (add to scope)",
-          "opinion": "Scope undefined, not in 90.35 days. Must clarify before contract",
-          "priority": "High"
-        },
-        {
-          "name": "P6 Headcount Dashboard",
-          "effort": "4.5 FE + 4.5 BE days",
-          "shouldBe": "Define exact chart count first",
-          "opinion": "Scope vague: approx 3 pages x 4 charts. Each chart = 0.5-1.0 FE day",
+          "effort": "3.0 FE days",
+          "shouldBe": "2.0 FE days",
+          "opinion": "Header config is metadata-driven. 3 FE days still seems high but acceptable given dynamic product column extension requirement.",
           "priority": "Medium"
         },
         {
-          "name": "P5 Allocation Key PM Effort",
-          "effort": "1.5 PM days",
-          "shouldBe": "0.5-1.0 PM days",
-          "opinion": "Simple calculation module, PM effort overestimated",
-          "priority": "Low"
+          "name": "P6 Dashboard long term部分",
+          "effort": "2.5 FE + 2.5 BE + 1.0 UI = 6.0 days",
+          "shouldBe": "Define scope clearly",
+          "opinion": "Long term is new scope addition. 6 days for long term dashboard section. Ensure scope is well-defined before development.",
+          "priority": "Medium"
+        },
+        {
+          "name": "P3 Salary Upload (CC + Contract × 3 params × Before/After)",
+          "effort": "0.5 FE + 0.5 BE + 2.0 UI = 3.0 days",
+          "shouldBe": "2.0 days",
+          "opinion": "2.0 UI days for upload interface seems high. Standard upload component should suffice.",
+          "priority": "Medium"
+        },
+        {
+          "name": "Existing System Dashboard Optimization",
+          "effort": "0.5 PM + 4.0 FE = 4.5 days",
+          "shouldBe": "2.0-3.0 days",
+          "opinion": "CSS styling changes (bold/enlarge numbers). 4 FE days remains overestimated. Should be 2-3 days max.",
+          "priority": "High"
         }
-      ]
+      ],
+      "assessment": {
+        "rateReasonable": true,
+        "rateNote": "CNY 2,242/day is within market range (CNY 2,000-2,800)",
+        "effortIncreaseJustified": true,
+        "effortNote": "+10 days vs old quote due to: long term, OT calculation, Actual sync, formula engine, PowerBI for Headcount",
+        "discountSignificant": true,
+        "discountNote": "10.3% discount from CNY 250,875 to CNY 225,000",
+        "recommendation": "ACCEPT - Rate reasonable, effort increase justified by new scope, discount significant. Monitor P6 SLA Dashboard (7.5d) and long term (6d) for scope creep."
+      }
     },
     "documents": [
       {
@@ -930,7 +914,7 @@
     "description": "Reach PS deployed SG&A target",
     "stage": "development",
     "stageLabel": "In Progress",
-    "progress": 10,
+    "progress": 15,
     "color": "accent",
     "icon": "fa-bullseye",
     "members": 1,
@@ -942,8 +926,82 @@
       "decisionsMade": []
     },
     "milestones": {
-      "phases": [],
-      "details": []
+      "phases": [
+        {
+          "name": "Cost Study & Logic Optimize",
+          "status": "current",
+          "date": "Jun 16, 2026"
+        },
+        {
+          "name": "Kick off & Alignment",
+          "status": "upcoming",
+          "date": "Jun 17, 2026"
+        },
+        {
+          "name": "Big Fish Hunting & Define Measures",
+          "status": "upcoming",
+          "date": "Jul 15, 2026"
+        },
+        {
+          "name": "Standardize Allocation Logic & Database",
+          "status": "upcoming",
+          "date": "Jul 15, 2026"
+        },
+        {
+          "name": "Build up Tracking Dashboard",
+          "status": "upcoming",
+          "date": "Aug 31, 2026"
+        },
+        {
+          "name": "Monthly, CF09, YEC Regular Track",
+          "status": "upcoming",
+          "date": "Dec 31, 2026"
+        }
+      ],
+      "details": [
+        {
+          "phase": "Cost Study & Logic Optimize",
+          "title": "Cost Study & Logic Optimize",
+          "status": "in-progress",
+          "date": "Jun 16, 2026",
+          "description": "Conduct cost study and optimize allocation logic"
+        },
+        {
+          "phase": "Kick off & Alignment",
+          "title": "Kick off & Alignment",
+          "status": "upcoming",
+          "date": "Jun 17, 2026",
+          "description": "Project kickoff and stakeholder alignment"
+        },
+        {
+          "phase": "Big Fish Hunting & Define Measures",
+          "title": "Big Fish Hunting & Define Measures",
+          "status": "upcoming",
+          "date": "Jul 15, 2026",
+          "description": "Identify major cost reduction opportunities and define measures"
+        },
+        {
+          "phase": "Standardize Allocation Logic & Database",
+          "title": "Standardize Allocation Logic & Database",
+          "status": "upcoming",
+          "date": "Jul 15, 2026",
+          "description": "Standardize SG&A allocation logic and build database"
+        },
+        {
+          "phase": "Build up Tracking Dashboard",
+          "title": "Build up Tracking Dashboard",
+          "status": "upcoming",
+          "date": "Aug 31, 2026",
+          "description": "Build SG&A tracking dashboard for monitoring"
+        },
+        {
+          "phase": "Monthly, CF09, YEC Regular Track",
+          "title": "Monthly, CF09, YEC Regular Track",
+          "status": "upcoming",
+          "date": "Dec 31, 2026",
+          "description": "Regular tracking: monthly review, CF09 forecast, YEC year-end closing"
+        }
+      ]
     },
     "opl": [],
     "quotation": {
