@@ -319,7 +319,7 @@
         "owner": "Chen Chen",
         "date": "2026-06-03",
         "priority": "Low",
-        "description": "Support manual input, batch upload with full overwrite, copy from prior versions"
+        "description": ""
       },
       {
         "id": "OPL-002",
@@ -329,7 +329,7 @@
         "owner": "Chen Chen",
         "date": "2026-06-03",
         "priority": "Low",
-        "description": "Include version comparison, changed/unchanged counts, cost impact analysis"
+        "description": ""
       },
       {
         "id": "OPL-003",
@@ -339,7 +339,7 @@
         "owner": "Gao Xunuo",
         "date": "2026-06-03",
         "priority": "High",
-        "description": "w/ effective month fields for salary changes"
+        "description": ""
       },
       {
         "id": "OPL-004",
@@ -349,7 +349,7 @@
         "owner": "Chen Chen",
         "date": "2026-06-02",
         "priority": "Low",
-        "description": "HC collection process needs FIE system volume input"
+        "description": ""
       },
       {
         "id": "OPL-005",
@@ -359,7 +359,7 @@
         "owner": "Gao Xunuo",
         "date": "2026-06-02",
         "priority": "Medium",
-        "description": "HC Collection - contract type needs introduction"
+        "description": ""
       },
       {
         "id": "OPL-006",
@@ -369,7 +369,7 @@
         "owner": "Chen Chen",
         "date": "2026-06-02",
         "priority": "Low",
-        "description": "HC Collection - Freeze actual HC input"
+        "description": ""
       },
       {
         "id": "OPL-007",
@@ -379,7 +379,7 @@
         "owner": "Chen Chen",
         "date": "2026-06-02",
         "priority": "Medium",
-        "description": "HC Collection - Delete add row function?"
+        "description": ""
       },
       {
         "id": "OPL-008",
@@ -389,7 +389,7 @@
         "owner": "Chen Chen",
         "date": "2026-05-29",
         "priority": "Medium",
-        "description": "Add upload guidance text: one upload covers HC, hours, and outsourcing"
+        "description": ""
       },
       {
         "id": "OPL-009",
@@ -399,7 +399,7 @@
         "owner": "Gao Xunuo",
         "date": "2026-06-03",
         "priority": "Medium",
-        "description": "Confirm data source for actual HC; can it sync into database?"
+        "description": ""
       },
       {
         "id": "OPL-010",
@@ -409,7 +409,7 @@
         "owner": "Zhang Zhongwen",
         "date": "2026-06-03",
         "priority": "Medium",
-        "description": "Evaluate task/confirmation design for 1 input + 2 confirmation parties (CTG BP & HR BP)"
+        "description": ""
       },
       {
         "id": "OPL-011",
@@ -419,7 +419,7 @@
         "owner": "Chen Chen",
         "date": "2026-06-03",
         "priority": "Medium",
-        "description": "Historical actual months must be frozen and not editable"
+        "description": ""
       },
       {
         "id": "OPL-012",
@@ -429,7 +429,7 @@
         "owner": "Chen Chen",
         "date": "2026-06-02",
         "priority": "Medium",
-        "description": "Insert one row of HC per cost center"
+        "description": ""
       },
       {
         "id": "OPL-013",
@@ -439,7 +439,7 @@
         "owner": "Chen Chen",
         "date": "2026-06-02",
         "priority": "Medium",
-        "description": "Labor cost of actual months should take trace back figure"
+        "description": ""
       },
       {
         "id": "OPL-014",
@@ -449,7 +449,7 @@
         "owner": "Chen Chen",
         "date": "2026-05-29",
         "priority": "Medium",
-        "description": "Add CBS as separate upload base in LC calculation"
+        "description": ""
       },
       {
         "id": "OPL-015",
@@ -459,7 +459,7 @@
         "owner": "Gao Xunuo",
         "date": "2026-05-29",
         "priority": "Medium",
-        "description": "Revise overtime clearing logic (March & September)"
+        "description": ""
       },
       {
         "id": "OPL-016",
@@ -469,7 +469,7 @@
         "owner": "Zhang Zhongwen",
         "date": "2026-06-03",
         "priority": "Low",
-        "description": "3 working days"
+        "description": ""
       },
       {
         "id": "OPL-017",
@@ -479,7 +479,7 @@
         "owner": "Gao Xunuo",
         "date": "2026-05-29",
         "priority": "Medium",
-        "description": "Redesign fill logic for rolling and non-standard scenarios"
+        "description": ""
       },
       {
         "id": "OPL-018",
@@ -489,7 +489,7 @@
         "owner": "Lu Haixia",
         "date": "2026-06-02",
         "priority": "Medium",
-        "description": "QMM/TEF input with separated direct/indirect HC, re-consider key calculation"
+        "description": ""
       },
       {
         "id": "OPL-019",
@@ -499,7 +499,7 @@
         "owner": "Lu Haixia",
         "date": "2026-06-03",
         "priority": "Medium",
-        "description": "Provide latest SLA table header structure and field requirements"
+        "description": ""
       },
       {
         "id": "OPL-020",
@@ -509,7 +509,7 @@
         "owner": "Zhang Zhongwen",
         "date": "2026-06-03",
         "priority": "Medium",
-        "description": "Evaluate SLA PDF export vs Excel download & print"
+        "description": ""
       },
       {
         "id": "OPL-021",
@@ -519,7 +519,7 @@
         "owner": "Zhang Zhongwen",
         "date": "2026-06-03",
         "priority": "Low",
-        "description": "at least 15 working days",
+        "description": "",
         "remark": "HOD 6.15 decided: SLA does not need approval workflow"
       },
       {
@@ -530,7 +530,7 @@
         "owner": "Lu Haixia",
         "date": "2026-06-02",
         "priority": "Medium",
-        "description": "SLA HC distribution process needs product delivery volume input",
+        "description": "",
         "remark": "HOD 6.15 decided: SLA does not need task info for service receiver. Service provider responsible."
       },
       {
@@ -541,7 +541,7 @@
         "owner": "Chen Chen",
         "date": "2026-05-29",
         "priority": "Medium",
-        "description": "Draft dashboard list and estimate chart count for vendor quotation"
+        "description": ""
       },
       {
         "id": "OPL-024",
@@ -551,7 +551,7 @@
         "owner": "Chen Chen",
         "date": "2026-05-29",
         "priority": "Medium",
-        "description": "Design HC dashboard views: actual, forecast, average analysis"
+        "description": ""
       },
       {
         "id": "OPL-025",
@@ -561,7 +561,7 @@
         "owner": "Chen Chen",
         "date": "2026-05-29",
         "priority": "Medium",
-        "description": "Design LC dashboard views by function area: direct, indirect, total"
+        "description": ""
       },
       {
         "id": "OPL-026",
@@ -571,7 +571,7 @@
         "owner": "Chen Chen",
         "date": "2026-06-02",
         "priority": "Low",
-        "description": "Schedule follow-up meeting to discuss dashboard content"
+        "description": ""
       },
       {
         "id": "OPL-027",
@@ -581,7 +581,7 @@
         "owner": "Chen Chen",
         "date": "2026-06-02",
         "priority": "Medium",
-        "description": "LtP-C process is different with BP/CF process, should separately develop"
+        "description": ""
       },
       {
         "id": "OPL-028",
@@ -591,7 +591,7 @@
         "owner": "Zhang Zhongwen",
         "date": "2026-06-03",
         "priority": "Low",
-        "description": "3 working days"
+        "description": ""
       }
     ],
     "quotation": {
