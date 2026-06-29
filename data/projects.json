@@ -143,7 +143,7 @@
         },
         {
           "name": "Alignment",
-          "status": "completed",
+          "status": "current",
           "date": "Jun 2026"
         },
         {
@@ -211,11 +211,10 @@
         {
           "phase": "Preparation",
           "title": "Process Mapping Details (Input/Effort/Output)",
-          "status": "in-progress",
+          "status": "completed",
           "date": "Jun 19, 2026",
           "description": "Detailed process mapping for each module: Premise Design, HC Collection, Labor Cost Calculation, SLA, Dashboard. Format: Input -> Effort -> Output with tables, fields, and calculation formulas.",
-          "owner": "Gao Xunuo / Lu Haixia",
-          "note": "HOD meeting 6.15 decision: required before project start"
+          "owner": "Gao Xunuo / Lu Haixia"
         },
         {
           "phase": "Alignment",
@@ -227,9 +226,10 @@
         {
           "phase": "Alignment",
           "title": "Scope Alignment w/ HOD",
-          "status": "completed",
+          "status": "in-progress",
           "date": "Jun 15, 2026",
-          "description": "HOD scope alignment completed"
+          "description": "Pending HOD approval on project scope",
+          "note": "Pending approval"
         },
         {
           "phase": "Development",
@@ -914,11 +914,11 @@
     "description": "Reach PS deployed SG&A target",
     "stage": "development",
     "stageLabel": "In Progress",
-    "progress": 15,
+    "progress": 33,
     "color": "accent",
     "icon": "fa-bullseye",
     "members": 1,
-    "lastUpdate": "Jun 16, 2026",
+    "lastUpdate": "Jun 17, 2026",
     "urgentTasks": {
       "decisions": [],
       "upcoming": [],
@@ -929,17 +929,17 @@
       "phases": [
         {
           "name": "Cost Study & Logic Optimize",
-          "status": "current",
+          "status": "completed",
           "date": "Jun 16, 2026"
         },
         {
           "name": "Kick off & Alignment",
-          "status": "upcoming",
+          "status": "completed",
           "date": "Jun 17, 2026"
         },
         {
           "name": "Big Fish Hunting & Define Measures",
-          "status": "upcoming",
+          "status": "current",
           "date": "Jul 15, 2026"
         },
         {
@@ -962,14 +962,14 @@
         {
           "phase": "Cost Study & Logic Optimize",
           "title": "Cost Study & Logic Optimize",
-          "status": "in-progress",
+          "status": "completed",
           "date": "Jun 16, 2026",
           "description": "Conduct cost study and optimize allocation logic"
         },
         {
           "phase": "Kick off & Alignment",
           "title": "Kick off & Alignment",
-          "status": "upcoming",
+          "status": "completed",
           "date": "Jun 17, 2026",
           "description": "Project kickoff and stakeholder alignment"
         },
