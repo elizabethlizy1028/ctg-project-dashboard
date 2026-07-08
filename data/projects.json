@@ -188,7 +188,7 @@
           "description": "Approach prototype design for the platform"
         },
         {
-          "phase": "Alignment",
+          "phase": "Preparation",
           "title": "Approach Alignment w/ PC",
           "status": "completed",
           "date": "Jun 2, 2026",
@@ -196,7 +196,7 @@
         },
         {
           "phase": "Preparation",
-          "title": "Dashboard Design",
+          "title": "Dashboard Prototype Design",
           "status": "completed",
           "date": "Jun 12, 2026",
           "description": "Dashboard layout and design"
@@ -209,7 +209,7 @@
           "description": "Complete cost assessment with BCSC vendor"
         },
         {
-          "phase": "Alignment",
+          "phase": "Preparation",
           "title": "Dashboard Alignment w/ PC",
           "status": "completed",
           "date": "Jun 14, 2026",
@@ -224,7 +224,7 @@
           "note": "Pending approval"
         },
         {
-          "phase": "Preparation",
+          "phase": "Alignment",
           "title": "Process Mapping Details (Input/Effort/Output)",
           "status": "completed",
           "date": "Jun 19, 2026",
@@ -233,7 +233,7 @@
         },
         {
           "phase": "Preparation",
-          "title": "Process Mapping w/ Section Manager",
+          "title": "Process Mapping Alignment w/ Section Manager",
           "status": "completed",
           "date": "Jun 25, 2026",
           "description": "Process mapping workshop with section managers"
