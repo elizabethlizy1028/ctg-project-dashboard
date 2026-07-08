@@ -48,7 +48,7 @@
           "title": "HOD Decision on Project Framework",
           "owner": "Chen Chen",
           "dueDate": "2026-06-12",
-          "status": "In Progress",
+          "status": "Pending HOD",
           "progress": 50
         },
         {
@@ -687,7 +687,7 @@
         {
           "title": "Scope Confirmation: Whether to include Customs and Tax functions",
           "owner": "Chen Chen",
-          "dueDate": "TBD",
+          "dueDate": "2026-07-10",
           "status": "Not Started",
           "progress": 0
         }
