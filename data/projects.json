@@ -48,8 +48,8 @@
           "title": "HOD Decision on Project Framework",
           "owner": "Chen Chen",
           "dueDate": "2026-06-12",
-          "status": "Done",
-          "progress": 100
+          "status": "In Progress",
+          "progress": 50
         },
         {
           "title": "Organize Upload/Download Templates",
@@ -664,7 +664,7 @@
     "deadline": "2026-08-22"
   },
   "ctg-chatbot": {
-    "name": "CTG ChatBOT",
+    "name": "Controlling BOT",
     "subtitle": "Intelligent Customer Service Chatbot",
     "description": "Intelligent customer service chatbot based on LLM for CTG business scenarios.",
     "stage": "idea",
@@ -676,7 +676,22 @@
     "lastUpdate": "Just now",
     "urgentTasks": {
       "decisions": [],
-      "upcoming": [],
+      "upcoming": [
+        {
+          "title": "FAQ Collection",
+          "owner": "Chen Chen",
+          "dueDate": "2026-07-17",
+          "status": "Not Started",
+          "progress": 0
+        },
+        {
+          "title": "Scope Confirmation: Whether to include Customs and Tax functions",
+          "owner": "Chen Chen",
+          "dueDate": "TBD",
+          "status": "Not Started",
+          "progress": 0
+        }
+      ],
       "risks": []
     },
     "milestones": {
@@ -1015,108 +1030,6 @@
     "documents": [],
     "leader": "Ye Yanyan",
     "deadline": "2026-08-31"
-  },
-  "investment-tracking": {
-    "name": "Investment Tracking Sys.",
-    "subtitle": "Investment Monitoring Platform",
-    "description": "Investment tracking and monitoring system",
-    "stage": "idea",
-    "stageLabel": "Idea",
-    "progress": 5,
-    "color": "yellow",
-    "icon": "fa-coins",
-    "members": 1,
-    "lastUpdate": "Jun 16, 2026",
-    "urgentTasks": {
-      "decisions": [],
-      "upcoming": [],
-      "risks": [],
-      "decisionsMade": []
-    },
-    "milestones": {
-      "phases": [],
-      "details": []
-    },
-    "opl": [],
-    "quotation": {
-      "totalBudget": "TBD",
-      "spent": "CNY 0",
-      "remaining": "TBD",
-      "vendor": "TBD",
-      "personDays": "TBD",
-      "highEffortItems": []
-    },
-    "documents": [],
-    "leader": "Gao Xunuo",
-    "deadline": "2026-12-31"
-  },
-  "tech-rpp": {
-    "name": "Tech. RPP",
-    "subtitle": "Technology Resource Planning",
-    "description": "Technology resource planning platform",
-    "stage": "idea",
-    "stageLabel": "Idea",
-    "progress": 5,
-    "color": "yellow",
-    "icon": "fa-microchip",
-    "members": 1,
-    "lastUpdate": "Jun 16, 2026",
-    "urgentTasks": {
-      "decisions": [],
-      "upcoming": [],
-      "risks": [],
-      "decisionsMade": []
-    },
-    "milestones": {
-      "phases": [],
-      "details": []
-    },
-    "opl": [],
-    "quotation": {
-      "totalBudget": "TBD",
-      "spent": "CNY 0",
-      "remaining": "TBD",
-      "vendor": "TBD",
-      "personDays": "TBD",
-      "highEffortItems": []
-    },
-    "documents": [],
-    "leader": "Pending",
-    "deadline": "2026-12-31"
-  },
-  "project-assessment": {
-    "name": "Project Assessment",
-    "subtitle": "Project Evaluation Framework",
-    "description": "Project assessment and evaluation system",
-    "stage": "idea",
-    "stageLabel": "Idea",
-    "progress": 5,
-    "color": "yellow",
-    "icon": "fa-clipboard-check",
-    "members": 1,
-    "lastUpdate": "Jun 16, 2026",
-    "urgentTasks": {
-      "decisions": [],
-      "upcoming": [],
-      "risks": [],
-      "decisionsMade": []
-    },
-    "milestones": {
-      "phases": [],
-      "details": []
-    },
-    "opl": [],
-    "quotation": {
-      "totalBudget": "TBD",
-      "spent": "CNY 0",
-      "remaining": "TBD",
-      "vendor": "TBD",
-      "personDays": "TBD",
-      "highEffortItems": []
-    },
-    "documents": [],
-    "leader": "Pending",
-    "deadline": "2026-12-31"
   },
   "fast-close": {
     "name": "Fast Close",
