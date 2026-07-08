@@ -175,31 +175,31 @@
       "details": [
         {
           "phase": "Initiation",
-          "title": "Interviews - Draw Process Map",
+          "title": "Interviews - Draw Process Map & Quantify Pain Points",
           "status": "completed",
           "date": "May 31, 2026",
-          "description": "Interview stakeholders, draw process map, dig out pain points"
+          "description": "Interview stakeholders, draw process map, dig out and quantify pain points"
         },
         {
           "phase": "Initiation",
-          "title": "UI Design",
+          "title": "Approach Prototype Design",
           "status": "completed",
           "date": "May 31, 2026",
-          "description": "User interface design for the platform"
+          "description": "Approach prototype design for the platform"
+        },
+        {
+          "phase": "Alignment",
+          "title": "Approach Alignment w/ PC",
+          "status": "completed",
+          "date": "Jun 2, 2026",
+          "description": "Approach aligned with PC team"
         },
         {
           "phase": "Preparation",
-          "title": "Template & Dashboard Design",
+          "title": "Dashboard Design",
           "status": "completed",
           "date": "Jun 12, 2026",
-          "description": "Design templates and dashboard layout"
-        },
-        {
-          "phase": "Preparation",
-          "title": "OPL Follow Up",
-          "status": "completed",
-          "date": "Jun 12, 2026",
-          "description": "Follow up on all open points"
+          "description": "Dashboard layout and design"
         },
         {
           "phase": "Preparation",
@@ -209,19 +209,11 @@
           "description": "Complete cost assessment with BCSC vendor"
         },
         {
-          "phase": "Preparation",
-          "title": "Process Mapping Details (Input/Effort/Output)",
-          "status": "completed",
-          "date": "Jun 19, 2026",
-          "description": "Detailed process mapping for each module: Premise Design, HC Collection, Labor Cost Calculation, SLA, Dashboard. Format: Input -> Effort -> Output with tables, fields, and calculation formulas.",
-          "owner": "Gao Xunuo / Lu Haixia"
-        },
-        {
           "phase": "Alignment",
-          "title": "Approach Alignment w/ PC",
+          "title": "Dashboard Alignment w/ PC",
           "status": "completed",
-          "date": "Jun 3, 2026",
-          "description": "Approach aligned with PC team"
+          "date": "Jun 14, 2026",
+          "description": "Dashboard design alignment with PC team"
         },
         {
           "phase": "Alignment",
@@ -232,18 +224,19 @@
           "note": "Pending approval"
         },
         {
-          "phase": "Development",
-          "title": "Platform Development - BCSC",
-          "status": "upcoming",
-          "date": "Aug 5, 2026",
-          "description": "Core platform development by BCSC vendor. Phase 1 deadline: Aug 5."
+          "phase": "Preparation",
+          "title": "Process Mapping Details (Input/Effort/Output)",
+          "status": "completed",
+          "date": "Jun 19, 2026",
+          "description": "Detailed process mapping for each module: Premise Design, HC Collection, Labor Cost Calculation, SLA, Dashboard. Format: Input -> Effort -> Output with tables, fields, and calculation formulas.",
+          "owner": "Gao Xunuo / Lu Haixia"
         },
         {
-          "phase": "Development",
-          "title": "BOT Development for Instruction & FAQ - ICO",
-          "status": "upcoming",
-          "date": "Aug 5, 2026",
-          "description": "Chatbot development for instructions and FAQ"
+          "phase": "Preparation",
+          "title": "Process Mapping w/ Section Manager",
+          "status": "completed",
+          "date": "Jun 25, 2026",
+          "description": "Process mapping workshop with section managers"
         },
         {
           "phase": "Interaction UAT & Release",
@@ -258,6 +251,20 @@
           "status": "upcoming",
           "date": "Jul 31, 2026",
           "description": "Release interaction module to user departments"
+        },
+        {
+          "phase": "Development",
+          "title": "Platform Development - BCSC",
+          "status": "upcoming",
+          "date": "Aug 5, 2026",
+          "description": "Core platform development by BCSC vendor. Phase 1 deadline: Aug 5."
+        },
+        {
+          "phase": "Development",
+          "title": "BOT Development for Instruction & FAQ - ICO",
+          "status": "upcoming",
+          "date": "Aug 5, 2026",
+          "description": "Chatbot development for instructions and FAQ"
         },
         {
           "phase": "UAT",
