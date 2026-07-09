@@ -181,22 +181,15 @@
           "description": "Interview stakeholders, draw process map, dig out and quantify pain points"
         },
         {
-          "phase": "Initiation",
-          "title": "Approach Prototype Design",
+          "phase": "Preparation",
+          "title": "Approach Prototype Design & Alignment w/ PC",
           "status": "completed",
-          "date": "May 31, 2026",
+          "date": "Jun 2, 2026",
           "description": "Approach prototype design for the platform"
         },
         {
           "phase": "Preparation",
-          "title": "Approach Alignment w/ PC",
-          "status": "completed",
-          "date": "Jun 2, 2026",
-          "description": "Approach aligned with PC team"
-        },
-        {
-          "phase": "Preparation",
-          "title": "Dashboard Prototype Design",
+          "title": "Dashboard Prototype Design & Alignment w/ PC",
           "status": "completed",
           "date": "Jun 12, 2026",
           "description": "Dashboard layout and design"
@@ -209,13 +202,6 @@
           "description": "Complete cost assessment with BCSC vendor"
         },
         {
-          "phase": "Preparation",
-          "title": "Dashboard Alignment w/ PC",
-          "status": "completed",
-          "date": "Jun 14, 2026",
-          "description": "Dashboard design alignment with PC team"
-        },
-        {
           "phase": "Alignment",
           "title": "Scope Alignment w/ HOD",
           "status": "in-progress",
@@ -224,7 +210,7 @@
           "note": "Pending approval"
         },
         {
-          "phase": "Alignment",
+          "phase": "Preparation",
           "title": "Process Mapping Details (Input/Effort/Output)",
           "status": "completed",
           "date": "Jun 19, 2026",
@@ -232,7 +218,7 @@
           "owner": "Gao Xunuo / Lu Haixia"
         },
         {
-          "phase": "Preparation",
+          "phase": "Alignment",
           "title": "Process Mapping Alignment w/ Section Manager",
           "status": "completed",
           "date": "Jun 25, 2026",
