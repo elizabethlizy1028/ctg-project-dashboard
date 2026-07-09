@@ -225,20 +225,6 @@
           "description": "Process mapping workshop with section managers"
         },
         {
-          "phase": "Interaction UAT & Release",
-          "title": "Interaction Module UAT",
-          "status": "upcoming",
-          "date": "Jul 31, 2026",
-          "description": "User acceptance testing for user department interaction module. Must complete at least the interaction part with user departments."
-        },
-        {
-          "phase": "Interaction UAT & Release",
-          "title": "Interaction Module Release",
-          "status": "upcoming",
-          "date": "Jul 31, 2026",
-          "description": "Release interaction module to user departments"
-        },
-        {
           "phase": "Development",
           "title": "Platform Development - BCSC",
           "status": "upcoming",
