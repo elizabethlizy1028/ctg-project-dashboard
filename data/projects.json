@@ -573,7 +573,7 @@
       "spent": "CNY 0",
       "remaining": "CNY 225,000",
       "vendor": "BCSC",
-      "personDays": 100.35,
+      "personDays": 90,
       "originalPrice": "CNY 250,875",
       "discountedPrice": "CNY 225,000",
       "discountRate": "10.3%",
@@ -635,7 +635,117 @@
       }
     ],
     "leader": "Chen Chen",
-    "deadline": "2026-08-22"
+    "deadline": "2026-08-22",
+    "paybackPeriod": {
+      "result": 2.25,
+      "projectCostCNY": 225000,
+      "dailyRateCNY": 2500,
+      "projectCostPD": 90,
+      "annualSavingPD": 40,
+      "annualSavingHours": 316,
+      "annualSavingWD": 39.5,
+      "ctg1Hours": 178,
+      "ctg1WD": 22.25,
+      "ctg3Hours": 138,
+      "ctg3WD": 17.25,
+      "sections": [
+        {
+          "name": "HC Interaction - HC & Labor Cost",
+          "groups": [
+            {
+              "owner": "CTG3",
+              "items": [
+                {
+                  "item": "HC collection consolidation",
+                  "bpcf": 8,
+                  "ltpc": 4,
+                  "wd": 4.5
+                },
+                {
+                  "item": "Labor cost data migration calculation",
+                  "bpcf": 7,
+                  "ltpc": 4,
+                  "wd": 4.0
+                },
+                {
+                  "item": "Result verification and analysis",
+                  "bpcf": 4,
+                  "ltpc": 2,
+                  "wd": 2.25
+                },
+                {
+                  "item": "Calculate recursions",
+                  "bpcf": 8,
+                  "ltpc": 8,
+                  "wd": 5.0
+                }
+              ],
+              "subtotalBpcf": 27,
+              "annualBpcf": 108,
+              "subtotalLtpc": 18,
+              "annualLtpc": 18
+            },
+            {
+              "owner": "CTG1",
+              "items": [
+                {
+                  "item": "Result verification and analysis",
+                  "bpcf": 28,
+                  "ltpc": 28,
+                  "wd": 17.5
+                }
+              ],
+              "subtotalBpcf": 28,
+              "annualBpcf": 112,
+              "subtotalLtpc": 28,
+              "annualLtpc": 28
+            }
+          ]
+        },
+        {
+          "name": "HC Interaction - SLA",
+          "groups": [
+            {
+              "owner": "CTG1/3",
+              "items": [
+                {
+                  "item": "HC collection consolidation",
+                  "owner": "CTG1",
+                  "bpcf": 4,
+                  "ltpc": 4,
+                  "wd": 1.0
+                },
+                {
+                  "item": "Key calculation",
+                  "owner": "CTG1/3",
+                  "bpcf": 8,
+                  "ltpc": 8,
+                  "wd": 2.0
+                },
+                {
+                  "item": "Result verification and analysis",
+                  "owner": "CTG1/3",
+                  "bpcf": 4,
+                  "ltpc": 4,
+                  "wd": 1.0
+                },
+                {
+                  "item": "Result searching (Providers/Versions)",
+                  "owner": "CTG1",
+                  "bpcf": 9,
+                  "ltpc": 9,
+                  "wd": 2.25
+                }
+              ],
+              "subtotalBpcf": 25,
+              "annualBpcf": 25,
+              "subtotalLtpc": 25,
+              "annualLtpc": 25
+            }
+          ]
+        }
+      ]
+    }
   },
   "ctg-chatbot": {
     "name": "Controlling BOT",
