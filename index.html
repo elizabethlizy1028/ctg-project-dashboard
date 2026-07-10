@@ -175,6 +175,7 @@ tailwind.config = {
         <button class="project-tab flex-1 px-4 py-2 rounded-lg text-sm font-medium text-gray-500 transition-all whitespace-nowrap" data-tab="milestone-progress" onclick="switchProjectTab('milestone-progress')">Milestone Progress</button>
         <button class="project-tab flex-1 px-4 py-2 rounded-lg text-sm font-medium text-gray-500 transition-all whitespace-nowrap" data-tab="open-points" onclick="switchProjectTab('open-points')">Open Points</button>
         <button class="project-tab flex-1 px-4 py-2 rounded-lg text-sm font-medium text-gray-500 transition-all whitespace-nowrap" data-tab="quotation-assessment" onclick="switchProjectTab('quotation-assessment')">Quotation Assessment</button>
+        <button class="project-tab flex-1 px-4 py-2 rounded-lg text-sm font-medium text-gray-500 transition-all whitespace-nowrap" data-tab="hod-decisions" onclick="switchProjectTab('hod-decisions')">HOD Decisions</button>
         <button class="project-tab flex-1 px-4 py-2 rounded-lg text-sm font-medium text-gray-500 transition-all whitespace-nowrap" data-tab="payback-period" onclick="switchProjectTab('payback-period')">Payback Period</button>
         <button class="project-tab flex-1 px-4 py-2 rounded-lg text-sm font-medium text-gray-500 transition-all whitespace-nowrap" data-tab="documentation" onclick="switchProjectTab('documentation')">Documentation</button>
       </div>
@@ -453,19 +454,50 @@ function switchProjectTab(tab) {
         </tbody></table></div>
       </div>`;
   } else if (tab === 'quotation-assessment') {
-    if (project.quotation.highEffortItems.length === 0) {
+    const q = project.quotation;
+    if (!q || q.highEffortItems.length === 0) {
       content.innerHTML = `<div class="glass-card rounded-2xl p-8 shadow-sm flex flex-col items-center justify-center text-gray-400"><i class="fas fa-inbox text-4xl mb-4"></i><p class="text-lg font-medium">No quotation assessment yet</p><p class="text-sm">This project is still in the Idea stage</p></div>`;
       return;
     }
+    // Build quote items table if available
+    const quoteItemsHTML = q.quoteItems ? `
+      <div class="glass-card rounded-2xl p-6 shadow-sm mb-6">
+        <div class="flex items-center gap-2 mb-4"><div class="w-7 h-7 rounded-lg bg-gray-100 flex items-center justify-center"><i class="fas fa-list text-gray-500 text-xs"></i></div><h5 class="font-semibold text-dark-900 text-sm">Quotation Breakdown (${q.quoteItems.length} items)</h5></div>
+        <div class="overflow-x-auto"><table class="w-full text-xs">
+          <thead><tr class="border-b-2 border-gray-200 text-gray-500">
+            <th class="text-left py-2 px-3 font-medium">Module</th>
+            <th class="text-left py-2 px-3 font-medium">Task</th>
+            <th class="text-center py-2 px-2 font-medium">Type</th>
+            <th class="text-center py-2 px-2 font-medium">Effort (PD)</th>
+            <th class="text-center py-2 px-2 font-medium">Mandatory</th>
+          </tr></thead>
+          <tbody>
+            ${q.quoteItems.map(it => `<tr class="border-b border-gray-100 hover:bg-gray-50 ${!it.mandatory ? 'opacity-60' : ''}"><td class="py-2 px-3 text-gray-700 font-medium">${it.module}</td><td class="py-2 px-3 text-gray-600">${it.task}</td><td class="text-center py-2 px-2"><span class="text-[10px] px-1.5 py-0.5 rounded ${it.type.includes('FE') ? 'bg-blue-100 text-blue-700' : it.type.includes('BE') ? 'bg-purple-100 text-purple-700' : it.type.includes('Ops') ? 'bg-orange-100 text-orange-700' : 'bg-gray-100 text-gray-600'}">${it.type}</span></td><td class="text-center py-2 px-2 font-semibold text-dark-900">${it.effort}</td><td class="text-center py-2 px-2">${it.mandatory ? '<i class="fas fa-check text-green-500 text-xs"></i>' : '<i class="fas fa-minus text-gray-300 text-xs"></i>'}</td></tr>`).join('')}
+            <tr class="bg-primary-50/50 font-semibold text-primary-800 border-t-2 border-primary-200"><td class="py-2 px-3" colspan="3">Total</td><td class="text-center py-2 px-2">${q.personDays}</td><td class="text-center py-2 px-2 text-gray-400">—</td></tr>
+          </tbody>
+        </table></div>
+      </div>` : '';
+    // Build assessment summary dynamically
+    const assess = q.assessment || {};
+    const rateHTML = assess.rateReasonable !== undefined ? `<div class="p-3 rounded-xl ${assess.rateReasonable ? 'bg-green-50 border-green-200' : 'bg-red-50 border-red-200'} border"><p class="text-xs font-semibold ${assess.rateReasonable ? 'text-green-800' : 'text-red-800'} mb-1"><i class="fas ${assess.rateReasonable ? 'fa-check-circle' : 'fa-times-circle'} text-[10px] mr-1"></i>Rate Assessment</p><p class="text-xs text-gray-600">${assess.rateNote || ''}</p></div>` : '';
+    const effortHTML = assess.effortNote ? `<div class="p-3 rounded-xl bg-yellow-50 border border-yellow-200"><p class="text-xs font-semibold text-yellow-800 mb-1"><i class="fas fa-exclamation-circle text-[10px] mr-1"></i>Effort Assessment</p><p class="text-xs text-gray-600">${assess.effortNote}</p></div>` : '';
+    const scopeHTML = assess.scopeCoverage ? `<div class="p-3 rounded-xl bg-blue-50 border border-blue-200"><p class="text-xs font-semibold text-blue-800 mb-1"><i class="fas fa-info-circle text-[10px] mr-1"></i>Scope Coverage</p><p class="text-xs text-gray-600">${assess.scopeCoverage}</p></div>` : '';
+    const gapHTML = assess.designGap ? `<div class="p-3 rounded-xl bg-orange-50 border border-orange-200"><p class="text-xs font-semibold text-orange-800 mb-1"><i class="fas fa-exclamation-triangle text-[10px] mr-1"></i>Design Gap</p><p class="text-xs text-gray-600">${assess.designGap}</p></div>` : '';
+    const riskHTML = assess.risks ? `<div class="p-3 rounded-xl bg-red-50 border border-red-200"><p class="text-xs font-semibold text-red-800 mb-1"><i class="fas fa-bug text-[10px] mr-1"></i>Risks</p><ul class="text-xs text-gray-600 space-y-1 mt-1">${assess.risks.map(r => `<li>• ${r}</li>`).join('')}</ul></div>` : '';
+    const recHTML = assess.recommendation ? `<div class="p-3 rounded-xl bg-primary-50 border border-primary-200"><p class="text-xs font-semibold text-primary-800 mb-1"><i class="fas fa-flag text-[10px] mr-1"></i>Recommendation</p><p class="text-xs text-gray-600">${assess.recommendation}</p></div>` : '';
+    const contractHTML = q.contractType ? `<div class="p-3 rounded-xl bg-green-50 border border-green-200"><p class="text-xs font-semibold text-green-800 mb-1"><i class="fas fa-check-circle text-[10px] mr-1"></i>${q.contractType} Contract</p><p class="text-xs text-gray-600">Cost overrun risk is on the vendor side.</p></div>` : '';
+    const dailyRateDisplay = q.dailyRate || (q.personDays ? `CNY ${Math.round(parseInt(q.totalBudget.replace(/[^0-9]/g, '')) / q.personDays).toLocaleString()}/day` : '');
+
     content.innerHTML = `
       <div class="space-y-6">
+        ${quoteItemsHTML}
         <div class="glass-card rounded-2xl p-6 shadow-sm">
-          <h4 class="font-bold text-dark-900 mb-5">Quotation Assessment - CNY 225,000 (BCSC, 90 person-days)</h4>
+          <h4 class="font-bold text-dark-900 mb-5">Quotation Assessment - ${q.totalBudget} (${q.vendor}, ${q.personDays} person-days)</h4>
           <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
             <!-- Left: Over-estimated Items -->
             <div>
               <div class="flex items-center gap-2 mb-4"><div class="w-7 h-7 rounded-lg bg-red-100 flex items-center justify-center"><i class="fas fa-exclamation-triangle text-red-500 text-xs"></i></div><h5 class="font-semibold text-dark-900 text-sm">Over-estimated Items</h5></div>
-              <div class="space-y-3">${project.quotation.highEffortItems.map(item => `
+              <div class="space-y-3">${q.highEffortItems.map(item => `
                 <div class="p-3 rounded-xl border-l-3 border-red-400 bg-red-50/50">
                   <div class="flex items-start justify-between mb-1"><p class="text-sm font-semibold text-dark-900">${item.name}</p><span class="text-[10px] ${item.priority === 'High' ? 'priority-high' : item.priority === 'Medium' ? 'priority-medium' : 'priority-low'} px-2 py-0.5 rounded-full font-semibold ml-2 whitespace-nowrap">${item.priority}</span></div>
                   <p class="text-xs text-gray-500 mb-1"><i class="fas fa-clock text-[10px] mr-1"></i>Quoted: ${item.effort}</p>
@@ -480,40 +512,52 @@ function switchProjectTab(tab) {
                 <div class="p-3 rounded-xl bg-gray-50 border border-gray-200">
                   <p class="text-xs font-semibold text-dark-900 mb-2">Budget Status</p>
                   <div class="grid grid-cols-2 gap-2">
-                    <div class="flex justify-between"><span class="text-xs text-gray-500">Total Budget</span><span class="text-xs font-semibold">${project.quotation.totalBudget}</span></div>
-                    <div class="flex justify-between"><span class="text-xs text-gray-500">Vendor</span><span class="text-xs font-semibold">${project.quotation.vendor}</span></div>
-                    <div class="flex justify-between"><span class="text-xs text-gray-500">Person-days</span><span class="text-xs font-semibold">${project.quotation.personDays}</span></div>
-                    <div class="flex justify-between"><span class="text-xs text-gray-500">Implied Rate</span><span class="text-xs font-semibold">CNY 2,500/day</span></div>
+                    <div class="flex justify-between"><span class="text-xs text-gray-500">Total Budget</span><span class="text-xs font-semibold">${q.totalBudget}</span></div>
+                    <div class="flex justify-between"><span class="text-xs text-gray-500">Vendor</span><span class="text-xs font-semibold">${q.vendor}</span></div>
+                    <div class="flex justify-between"><span class="text-xs text-gray-500">Person-days</span><span class="text-xs font-semibold">${q.personDays}</span></div>
+                    <div class="flex justify-between"><span class="text-xs text-gray-500">Implied Rate</span><span class="text-xs font-semibold">${dailyRateDisplay}</span></div>
                   </div>
                 </div>
-                <div class="p-3 rounded-xl bg-green-50 border border-green-200">
-                  <p class="text-xs font-semibold text-green-800 mb-1"><i class="fas fa-check-circle text-[10px] mr-1"></i>Fixed-Price Contract</p>
-                  <p class="text-xs text-gray-600">Cost overrun risk is on the vendor side. Favorable for the project.</p>
-                </div>
-                <div class="p-3 rounded-xl bg-yellow-50 border border-yellow-200">
-                  <p class="text-xs font-semibold text-yellow-800 mb-1"><i class="fas fa-exclamation-circle text-[10px] mr-1"></i>Scope Risks</p>
-                  <ul class="text-xs text-gray-600 space-y-1 mt-1">
-                    <li>- P2 Actual HC sync (TBD): not in 90.35 days, may add 3-5 days</li>
-                    <li>- P6 Headcount dashboard: vague scope "approx 3 pages x 4 charts"</li>
-                  </ul>
-                </div>
-                <div class="p-3 rounded-xl bg-blue-50 border border-blue-200">
-                  <p class="text-xs font-semibold text-blue-800 mb-1"><i class="fas fa-info-circle text-[10px] mr-1"></i>Recommendation</p>
-                  <p class="text-xs text-gray-600">APPROVE with conditions: (1) Clarify TBD items before contract; (2) Define exact P6 chart count; (3) Lock scope in contract with change request process.</p>
-                </div>
-                <div class="p-3 rounded-xl bg-gray-50 border border-gray-200">
-                  <p class="text-xs font-semibold text-dark-900 mb-1">Effort Distribution</p>
-                  <div class="space-y-1.5 mt-1">
-                    <div class="flex items-center gap-2"><span class="text-[10px] text-gray-500 w-12">PM</span><div class="flex-1 bg-gray-200 rounded-full h-1.5"><div class="bg-primary-500 h-1.5 rounded-full" style="width:11.1%"></div></div><span class="text-[10px] font-medium">10.0d (11.1%)</span></div>
-                    <div class="flex items-center gap-2"><span class="text-[10px] text-gray-500 w-12">FE</span><div class="flex-1 bg-gray-200 rounded-full h-1.5"><div class="bg-blue-500 h-1.5 rounded-full" style="width:35.8%"></div></div><span class="text-[10px] font-medium">32.35d (35.8%)</span></div>
-                    <div class="flex items-center gap-2"><span class="text-[10px] text-gray-500 w-12">BE</span><div class="flex-1 bg-gray-200 rounded-full h-1.5"><div class="bg-accent-500 h-1.5 rounded-full" style="width:43.7%"></div></div><span class="text-[10px] font-medium">39.5d (43.7%)</span></div>
-                    <div class="flex items-center gap-2"><span class="text-[10px] text-gray-500 w-12">UI</span><div class="flex-1 bg-gray-200 rounded-full h-1.5"><div class="bg-purple-500 h-1.5 rounded-full" style="width:9.4%"></div></div><span class="text-[10px] font-medium">8.5d (9.4%)</span></div>
-                  </div>
-                </div>
+                ${contractHTML}
+                ${rateHTML}
+                ${effortHTML}
+                ${scopeHTML}
+                ${gapHTML}
+                ${riskHTML}
+                ${recHTML}
               </div>
             </div>
           </div>
         </div>
+      </div>`;
+  } else if (tab === 'hod-decisions') {
+    const hods = project.hodDecisions || [];
+    if (hods.length === 0) {
+      content.innerHTML = `<div class="glass-card rounded-2xl p-8 shadow-sm flex flex-col items-center justify-center text-gray-400"><i class="fas fa-gavel text-4xl mb-4"></i><p class="text-lg font-medium">No HOD decisions pending</p><p class="text-sm">All decisions have been resolved</p></div>`;
+      return;
+    }
+    content.innerHTML = `
+      <div class="space-y-4">
+        ${hods.map(h => `
+          <div class="glass-card rounded-2xl p-6 shadow-sm border-l-4 ${h.priority === 'High' ? 'border-red-400' : h.priority === 'Medium' ? 'border-yellow-400' : 'border-gray-300'}">
+            <div class="flex items-start justify-between mb-3">
+              <div class="flex items-center gap-3">
+                <div class="w-9 h-9 rounded-lg ${h.status === 'Pending' ? 'bg-orange-100' : h.status === 'Approved' ? 'bg-green-100' : 'bg-gray-100'} flex items-center justify-center"><i class="fas ${h.status === 'Pending' ? 'fa-hourglass-half text-orange-500' : 'fa-check text-green-500'} text-sm"></i></div>
+                <div>
+                  <h4 class="font-bold text-dark-900 text-sm">${h.title}</h4>
+                  <p class="text-xs text-gray-400 mt-0.5">${h.category} · Raised by ${h.raisedBy} · ${h.raisedDate}</p>
+                </div>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="text-[10px] ${h.priority === 'High' ? 'priority-high' : h.priority === 'Medium' ? 'priority-medium' : 'priority-low'} px-2 py-0.5 rounded-full font-semibold">${h.priority}</span>
+                <span class="text-[10px] ${h.status === 'Pending' ? 'status-pending' : 'status-done'} px-2 py-0.5 rounded-full font-semibold">${h.status}</span>
+              </div>
+            </div>
+            <p class="text-sm text-gray-600 mb-3">${h.description}</p>
+            ${h.context ? `<div class="p-2.5 rounded-lg bg-gray-50 border border-gray-200 mb-3"><p class="text-xs text-gray-500 mb-0.5 font-medium"><i class="fas fa-info-circle text-[10px] mr-1"></i>Context</p><p class="text-xs text-gray-600">${h.context}</p></div>` : ''}
+            ${h.impact ? `<div class="p-2.5 rounded-lg bg-red-50/50 border border-red-200 mb-3"><p class="text-xs text-red-500 mb-0.5 font-medium"><i class="fas fa-bolt text-[10px] mr-1"></i>Impact</p><p class="text-xs text-gray-600">${h.impact}</p></div>` : ''}
+            ${h.options ? `<div class="mb-2"><p class="text-xs font-semibold text-dark-900 mb-2"><i class="fas fa-list-ol text-[10px] mr-1 text-primary-500"></i>Options for HOD</p><div class="space-y-2">${h.options.map((opt, i) => `<div class="flex items-start gap-2 p-2 rounded-lg bg-white border border-gray-200 hover:border-primary-300 transition-colors"><div class="w-5 h-5 rounded-full bg-primary-100 text-primary-600 text-[10px] font-bold flex items-center justify-center flex-shrink-0">${i+1}</div><div class="flex-1"><p class="text-xs font-semibold text-dark-900">${opt.label}</p><p class="text-xs text-gray-500 mt-0.5">${opt.note}</p></div></div>`).join('')}</div></div>` : ''}
+          </div>`).join('')}
       </div>`;
   } else if (tab === 'payback-period') {
     const pb = project.paybackPeriod;
