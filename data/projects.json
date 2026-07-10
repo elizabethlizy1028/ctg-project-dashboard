@@ -13,6 +13,12 @@
     "urgentTasks": {
       "decisions": [
         {
+          "title": "Dashboard overview page alignment",
+          "priority": "high",
+          "dueDate": "2026-07-17",
+          "description": "Need HOD to align on dashboard overview page design direction (cards + leaderboard + slicer) before BCSC proceeds with frontend development."
+        },
+        {
           "title": "BCSC Quotation Approval [RESOLVED]",
           "priority": "low",
           "dueDate": "2026-06-12",
@@ -745,31 +751,7 @@
           ]
         }
       ]
-    },
-    "hodDecisions": [
-      {
-        "id": "hod-001",
-        "title": "Dashboard Overview Page Alignment",
-        "description": "Need HOD to align on the dashboard overview page design direction — confirm whether the current layout (cards + leaderboard + slicer) matches expectations before BCSC proceeds with frontend development.",
-        "status": "Pending",
-        "priority": "High",
-        "raisedBy": "CTG",
-        "raisedDate": "2026-07-10",
-        "category": "Design Alignment",
-        "context": "HC Interaction dashboard overview page has been designed. Need HOD confirmation on layout before development continues.",
-        "impact": "Blocks frontend development of overview page",
-        "options": [
-          {
-            "label": "Approve current design",
-            "note": "Proceed with BCSC development as designed"
-          },
-          {
-            "label": "Adjust layout",
-            "note": "Provide feedback for redesign before development"
-          }
-        ]
-      }
-    ]
+    }
   },
   "ctg-chatbot": {
     "name": "Controlling BOT",
@@ -831,7 +813,38 @@
     "members": 1,
     "lastUpdate": "Jun 16, 2026",
     "urgentTasks": {
-      "decisions": [],
+      "decisions": [
+        {
+          "title": "Quotation confirmation from HOD",
+          "priority": "high",
+          "dueDate": "2026-07-17",
+          "description": "BCSC Phase 1 quotation CNY 45,000 (19.5 PD). Rate CNY 2,308/day reasonable. CI/CD 4d overestimated. Need HOD confirmation before contracting."
+        },
+        {
+          "title": "Overview page comment hover display",
+          "priority": "medium",
+          "dueDate": "2026-07-17",
+          "description": "TL1 design includes product card hover tooltip showing variance breakdown (MAT/Variable Cost, YTD vs CF, YTD vs Target). Currently NOT explicitly quoted by BCSC. Decide: include in Phase 1 / defer to Phase 2 / simplify."
+        },
+        {
+          "title": "Whether adjustment feature is needed",
+          "priority": "medium",
+          "dueDate": "2026-07-17",
+          "description": "Dynamic data adjustment page (动态调整页) — whether this feature is required in Phase 1. Adds 2.0 PD to quotation."
+        },
+        {
+          "title": "Whether year filter is needed",
+          "priority": "medium",
+          "dueDate": "2026-07-17",
+          "description": "Year slicer in multi-dimensional data slicer (多维度数据切片器). Whether year selection is required as a filter dimension."
+        },
+        {
+          "title": "Whether PPC/MAT/VA switch is needed",
+          "priority": "medium",
+          "dueDate": "2026-07-17",
+          "description": "PPC/MAT/VA dimension switch in slicer — whether this toggle is required for Phase 1 scope."
+        }
+      ],
       "upcoming": [],
       "risks": [],
       "decisionsMade": []
@@ -1013,61 +1026,7 @@
     },
     "documents": [],
     "leader": "CTG1",
-    "deadline": "2026-12-31",
-    "hodDecisions": [
-      {
-        "id": "hod-tl1-001",
-        "title": "Quotation Confirmation (BCSC Phase 1)",
-        "description": "BCSC Phase 1 quotation of CNY 45,000 (19.5 person-days) needs HOD confirmation before contracting. Assessment complete — rate reasonable but CI/CD overestimated and design gap on tooltip feature identified.",
-        "status": "Pending",
-        "priority": "High",
-        "raisedBy": "CTG",
-        "raisedDate": "2026-07-10",
-        "category": "Budget Approval",
-        "context": "BCSC quoted CNY 45,000 for APC TL1 Phase 1 (19.5 PD). Rate CNY 2,308/day within market range. CI/CD (4d) overestimated. Tooltip hover feature from design may not be covered.",
-        "impact": "Blocks contract signing and development start",
-        "options": [
-          {
-            "label": "Approve as-is (CNY 45,000)",
-            "note": "Accept quotation and proceed to contract"
-          },
-          {
-            "label": "Approve with negotiation",
-            "note": "Request CI/CD reduction (4d to 2-3d) and clarify tooltip scope before contract"
-          },
-          {
-            "label": "Reject",
-            "note": "Request BCSC to revise quotation"
-          }
-        ]
-      },
-      {
-        "id": "hod-tl1-002",
-        "title": "Overview Page Comment Hover Display",
-        "description": "The TL1 design HTML includes a product card hover tooltip showing detailed variance analysis (MAT/Variable Cost breakdown, YTD vs CF, YTD vs Target). Need HOD decision on whether to include this comment hover feature on the overview page in Phase 1.",
-        "status": "Pending",
-        "priority": "Medium",
-        "raisedBy": "CTG",
-        "raisedDate": "2026-07-10",
-        "category": "Feature Scope",
-        "context": "Design shows interactive tooltip on product cards with 1-second hover delay, displaying variance breakdown by category. This feature enhances UX but adds ~0.5-1.0 FE day. Currently NOT explicitly quoted by BCSC.",
-        "impact": "Affects Phase 1 scope and quotation. If approved, need to add ~0.5-1.0 day to quotation or negotiate inclusion in existing '主页卡片' scope.",
-        "options": [
-          {
-            "label": "Include in Phase 1",
-            "note": "Add tooltip hover feature to overview page — requires quotation adjustment (~+0.5-1.0 FE day) or scope clarification with BCSC"
-          },
-          {
-            "label": "Defer to Phase 2",
-            "note": "Ship overview page without tooltip in Phase 1, add in later iteration"
-          },
-          {
-            "label": "Simplify",
-            "note": "Replace interactive tooltip with static comment display (already quoted in detail page remarks area)"
-          }
-        ]
-      }
-    ]
+    "deadline": "2026-12-31"
   },
   "tns-tracking": {
     "name": "TNS Tracking Dashboard",
