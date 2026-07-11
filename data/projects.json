@@ -77,6 +77,20 @@
           "dueDate": "2026-06-12",
           "status": "In Progress",
           "progress": 50
+        },
+        {
+          "title": "Revise wording in the headcount collection design",
+          "owner": "Chen Chen",
+          "dueDate": "2026-07-18",
+          "status": "Not Started",
+          "progress": 0
+        },
+        {
+          "title": "Update headcount dashboard to show comparison/delta visualization between selected versions",
+          "owner": "Chen Chen",
+          "dueDate": "2026-07-25",
+          "status": "Not Started",
+          "progress": 0
         }
       ],
       "risks": [
