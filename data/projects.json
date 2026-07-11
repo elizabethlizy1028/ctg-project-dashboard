@@ -833,35 +833,38 @@
           "priority": "high",
           "dueDate": "2026-07-17",
           "description": "BCSC Phase 1 quotation CNY 45,000 (19.5 PD). Rate CNY 2,308/day reasonable. CI/CD 4d overestimated. Need HOD confirmation before contracting."
-        },
-        {
-          "title": "Overview page comment hover display",
-          "priority": "medium",
-          "dueDate": "2026-07-17",
-          "description": "TL1 design includes product card hover tooltip showing variance breakdown (MAT/Variable Cost, YTD vs CF, YTD vs Target). Currently NOT explicitly quoted by BCSC. Decide: include in Phase 1 / defer to Phase 2 / simplify."
-        },
-        {
-          "title": "Whether adjustment feature is needed",
-          "priority": "medium",
-          "dueDate": "2026-07-17",
-          "description": "Dynamic data adjustment page (动态调整页) — whether this feature is required in Phase 1. Adds 2.0 PD to quotation."
-        },
-        {
-          "title": "Whether year filter is needed",
-          "priority": "medium",
-          "dueDate": "2026-07-17",
-          "description": "Year slicer in multi-dimensional data slicer (多维度数据切片器). Whether year selection is required as a filter dimension."
-        },
-        {
-          "title": "Whether PPC/MAT/VA switch is needed",
-          "priority": "medium",
-          "dueDate": "2026-07-17",
-          "description": "PPC/MAT/VA dimension switch in slicer — whether this toggle is required for Phase 1 scope."
         }
       ],
       "upcoming": [],
       "risks": [],
-      "decisionsMade": []
+      "decisionsMade": [
+        {
+          "meetingDate": "2026-07-12",
+          "meetingName": "HOD Decision Update",
+          "decisions": [
+            {
+              "title": "Overview page comment hover display — NOT needed",
+              "description": "Confirmed: hover tooltip for variance breakdown (MAT/Variable Cost, YTD vs CF, YTD vs Target) is NOT required for Phase 1. Excluded from BCSC scope.",
+              "impact": "low"
+            },
+            {
+              "title": "Adjustment feature — NOT needed",
+              "description": "Confirmed: dynamic data adjustment page (动态调整页) is NOT required in Phase 1. Saves 2.0 PD from quotation.",
+              "impact": "medium"
+            },
+            {
+              "title": "Year filter — Confirmed needed",
+              "description": "Confirmed: year slicer in multi-dimensional data slicer (多维度数据切片器) IS required as a filter dimension for Phase 1.",
+              "impact": "medium"
+            },
+            {
+              "title": "PPC/MAT/VA switch — NOT needed",
+              "description": "Confirmed: PPC/MAT/VA dimension switch in slicer is NOT required for Phase 1 scope.",
+              "impact": "low"
+            }
+          ]
+        }
+      ]
     },
     "milestones": {
       "phases": [],
