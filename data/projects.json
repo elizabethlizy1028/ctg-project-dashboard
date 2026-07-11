@@ -81,14 +81,14 @@
         {
           "title": "Revise wording in the headcount collection design",
           "owner": "Chen Chen",
-          "dueDate": "2026-07-18",
+          "dueDate": "2026-07-15",
           "status": "Not Started",
           "progress": 0
         },
         {
           "title": "Update headcount dashboard to show comparison/delta visualization between selected versions",
           "owner": "Chen Chen",
-          "dueDate": "2026-07-25",
+          "dueDate": "2026-07-15",
           "status": "Not Started",
           "progress": 0
         }
@@ -835,7 +835,36 @@
           "description": "BCSC Phase 1 quotation CNY 45,000 (19.5 PD). Rate CNY 2,308/day reasonable. CI/CD 4d overestimated. Need HOD confirmation before contracting."
         }
       ],
-      "upcoming": [],
+      "upcoming": [
+        {
+          "title": "Enlarge dashboard font size, improve readability, and unify dashboard color style across products",
+          "owner": "Chen Chen",
+          "dueDate": "2026-07-15",
+          "status": "Not Started",
+          "progress": 0
+        },
+        {
+          "title": "Implement key-type tracking capability, including drill-down logic and key type selection standards",
+          "owner": "Chen Chen",
+          "dueDate": "2026-07-15",
+          "status": "Not Started",
+          "progress": 0
+        },
+        {
+          "title": "Create a standard comment/template framework with key bullets, concrete figures, and reason categories for key messages",
+          "owner": "Cao Hongqiu",
+          "dueDate": "2026-07-15",
+          "status": "Not Started",
+          "progress": 0
+        },
+        {
+          "title": "Re-review the updated dashboard and comment logic in next week's review meeting",
+          "owner": "Li Ci",
+          "dueDate": "2026-07-15",
+          "status": "Not Started",
+          "progress": 0
+        }
+      ],
       "risks": [],
       "decisionsMade": [
         {
@@ -861,6 +890,17 @@
               "title": "PPC/MAT/VA switch — NOT needed",
               "description": "Confirmed: PPC/MAT/VA dimension switch in slicer is NOT required for Phase 1 scope.",
               "impact": "low"
+            }
+          ]
+        },
+        {
+          "meetingDate": "2026-07-12",
+          "meetingName": "HOD Decision Update",
+          "decisions": [
+            {
+              "title": "Define Phase 2 manual adjustment mechanism with permission control and change log notification",
+              "description": "Phase 2 will include manual adjustment feature with: (1) permission control to restrict who can adjust data, (2) change log notification to track all adjustments. Deferred from Phase 1 scope.",
+              "impact": "high"
             }
           ]
         }
