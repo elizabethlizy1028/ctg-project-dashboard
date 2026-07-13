@@ -872,24 +872,9 @@
           "meetingName": "HOD Decision Update",
           "decisions": [
             {
-              "title": "Overview page comment hover display — NOT needed",
-              "description": "Confirmed: hover tooltip for variance breakdown (MAT/Variable Cost, YTD vs CF, YTD vs Target) is NOT required for Phase 1. Excluded from BCSC scope.",
-              "impact": "low"
-            },
-            {
-              "title": "Adjustment feature — NOT needed",
-              "description": "Confirmed: dynamic data adjustment page (动态调整页) is NOT required in Phase 1. Saves 2.0 PD from quotation.",
+              "title": "Phase 1 scope confirmation — 4 feature decisions",
+              "description": "HOD confirmed Phase 1 feature scope:\n1. Overview page comment hover display — NOT needed (excluded from BCSC scope)\n2. Adjustment feature (动态调整页) — NOT needed (saves 2.0 PD from quotation)\n3. PPC/MAT/VA dimension switch — NOT needed for Phase 1\n4. Year filter (年份筛选) — Confirmed needed as filter dimension in multi-dimensional slicer",
               "impact": "medium"
-            },
-            {
-              "title": "Year filter — Confirmed needed",
-              "description": "Confirmed: year slicer in multi-dimensional data slicer (多维度数据切片器) IS required as a filter dimension for Phase 1.",
-              "impact": "medium"
-            },
-            {
-              "title": "PPC/MAT/VA switch — NOT needed",
-              "description": "Confirmed: PPC/MAT/VA dimension switch in slicer is NOT required for Phase 1 scope.",
-              "impact": "low"
             }
           ]
         },
