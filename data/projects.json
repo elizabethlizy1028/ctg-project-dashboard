@@ -169,22 +169,22 @@
         {
           "name": "Development",
           "status": "upcoming",
-          "date": "Aug 5, 2026"
+          "date": "Aug 15, 2026"
         },
         {
-          "name": "UAT",
-          "status": "upcoming",
-          "date": "Aug 14, 2026"
-        },
-        {
-          "name": "Training Material",
+          "name": "UAT (Internal/External)",
           "status": "upcoming",
           "date": "Aug 21, 2026"
         },
         {
+          "name": "Internal/External Training",
+          "status": "upcoming",
+          "date": "Aug 25, 2026"
+        },
+        {
           "name": "Final Release",
           "status": "upcoming",
-          "date": "Aug 22, 2026"
+          "date": "Aug 26, 2026"
         }
       ],
       "details": [
@@ -241,65 +241,100 @@
         },
         {
           "phase": "Development",
+          "title": "P0 Infrastructure, P2 HC Collection, P4 SLA Collection, P6 Dashboard UI/Template Preparation",
+          "status": "upcoming",
+          "date": "Jul 21, 2026",
+          "description": "Kick off P0 基础设施、P2 HC Collection、P4 SLA Collection、P6 Dashboard UI/Template preparation"
+        },
+        {
+          "phase": "Development",
+          "title": "BCSC Fix UI Design & Start P0 Infrastructure",
+          "status": "upcoming",
+          "date": "Jul 28, 2026",
+          "description": "BCSC fix UI design and start P0 基础设施"
+        },
+        {
+          "phase": "Development",
+          "title": "P2 HC Collection",
+          "status": "upcoming",
+          "date": "Aug 4, 2026",
+          "description": "Complete P2 HC Collection development"
+        },
+        {
+          "phase": "Development",
+          "title": "Complete P2 HC Collection Remaining, P4 SLA Collection & P6 Dashboard",
+          "status": "upcoming",
+          "date": "Aug 11, 2026",
+          "description": "完成 P2 HC Collection 剩余功能, 完成 P4 SLA Collection; 完成 P6 Dashboard"
+        },
+        {
+          "phase": "Development",
           "title": "Platform Development - BCSC",
           "status": "upcoming",
-          "date": "Aug 5, 2026",
-          "description": "Core platform development by BCSC vendor. Phase 1 deadline: Aug 5."
+          "date": "Aug 15, 2026",
+          "description": "Core platform development by BCSC vendor. Phase 1 deadline: Aug 15."
         },
         {
           "phase": "Development",
           "title": "BOT Development for Instruction & FAQ - ICO",
           "status": "upcoming",
-          "date": "Aug 5, 2026",
+          "date": "Aug 15, 2026",
           "description": "Chatbot development for instructions and FAQ"
         },
         {
-          "phase": "UAT",
+          "phase": "Development",
+          "title": "Regression, Permission & Data Validation, Performance Check, Defect Fix; Release Candidate & Documentation Delivery",
+          "status": "upcoming",
+          "date": "Aug 18, 2026",
+          "description": "范围集中回归、权限与数据校验、性能检查、缺陷修复；发布候选版本、部署说明及操作说明交付"
+        },
+        {
+          "phase": "UAT (Internal/External)",
           "title": "CTG Internal Testing",
           "status": "upcoming",
-          "date": "Aug 14, 2026",
+          "date": "Aug 21, 2026",
           "description": "Internal user acceptance testing by CTG team"
         },
         {
-          "phase": "UAT",
-          "title": "Use Department Testing",
+          "phase": "UAT (Internal/External)",
+          "title": "User Department Testing",
           "status": "upcoming",
-          "date": "Aug 14, 2026",
+          "date": "Aug 21, 2026",
           "description": "Testing by business use departments"
         },
         {
-          "phase": "Training Material",
+          "phase": "Internal/External Training",
           "title": "Training Material Preparation",
           "status": "upcoming",
-          "date": "Aug 21, 2026",
+          "date": "Aug 25, 2026",
           "description": "Prepare training materials and documentation"
         },
         {
-          "phase": "Training Material",
+          "phase": "Internal/External Training",
           "title": "FAQ Documentation",
           "status": "upcoming",
-          "date": "Aug 21, 2026",
+          "date": "Aug 25, 2026",
           "description": "Compile FAQ documentation for end users"
         },
         {
           "phase": "Final Release",
           "title": "Internal Training",
           "status": "upcoming",
-          "date": "Aug 22, 2026",
+          "date": "Aug 25, 2026",
           "description": "Internal team training sessions"
         },
         {
           "phase": "Final Release",
           "title": "User Department Training",
           "status": "upcoming",
-          "date": "Aug 22, 2026",
+          "date": "Aug 25, 2026",
           "description": "End user department training"
         },
         {
           "phase": "Final Release",
           "title": "Final Release & Go-live",
           "status": "upcoming",
-          "date": "Aug 22, 2026",
+          "date": "Aug 26, 2026",
           "description": "Production deployment and go-live"
         }
       ]
