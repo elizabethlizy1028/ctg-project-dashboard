@@ -269,10 +269,10 @@
         },
         {
           "phase": "Development",
-          "title": "Platform Development - BCSC",
+          "title": "Regression, Permission & Data Validation, Performance Check, Defect Fix; Release Candidate & Documentation Delivery",
           "status": "upcoming",
           "date": "Aug 15, 2026",
-          "description": "Core platform development by BCSC vendor. Phase 1 deadline: Aug 15."
+          "description": "范围集中回归、权限与数据校验、性能检查、缺陷修复；发布候选版本、部署说明及操作说明交付"
         },
         {
           "phase": "Development",
@@ -283,10 +283,10 @@
         },
         {
           "phase": "Development",
-          "title": "Regression, Permission & Data Validation, Performance Check, Defect Fix; Release Candidate & Documentation Delivery",
+          "title": "Platform Development - BCSC",
           "status": "upcoming",
-          "date": "Aug 18, 2026",
-          "description": "范围集中回归、权限与数据校验、性能检查、缺陷修复；发布候选版本、部署说明及操作说明交付"
+          "date": "Aug 15, 2026",
+          "description": "Core platform development by BCSC vendor. Phase 1 deadline: Aug 15."
         },
         {
           "phase": "UAT (Internal/External)",
@@ -306,7 +306,7 @@
           "phase": "Internal/External Training",
           "title": "Training Material Preparation",
           "status": "upcoming",
-          "date": "Aug 25, 2026",
+          "date": "Aug 21, 2026",
           "description": "Prepare training materials and documentation"
         },
         {
@@ -927,8 +927,48 @@
       ]
     },
     "milestones": {
-      "phases": [],
-      "details": []
+      "phases": [
+        {
+          "name": "Development",
+          "status": "current",
+          "date": "Aug 11, 2026"
+        },
+        {
+          "name": "UAT",
+          "status": "upcoming",
+          "date": "Aug 11, 2026"
+        }
+      ],
+      "details": [
+        {
+          "phase": "Development",
+          "title": "UI Design & Technical Solution for SSO, Framework & Product Management",
+          "status": "upcoming",
+          "date": "Jul 21, 2026",
+          "description": "基于原型完成 UI 设计，同步梳理 SSO 单点登陆、框架搭建、产品管理模块的技术方案与接口清单"
+        },
+        {
+          "phase": "Development",
+          "title": "Develop SSO, Framework, Product Management, Homepage Permission & Cards; Parallel Detail Page Skeleton",
+          "status": "upcoming",
+          "date": "Jul 28, 2026",
+          "description": "开发 SSO 单点登陆、框架搭建、产品管理模块、主页权限、主页卡片；并行搭建详情页页面与接口骨架"
+        },
+        {
+          "phase": "Development",
+          "title": "Complete Detail Page, Dynamic Adjustment, Multi-dimensional Slicer & Product Ranking; Front-end/Back-end Integration; CI/CD Pipeline Ready",
+          "status": "upcoming",
+          "date": "Aug 4, 2026",
+          "description": "完成详情页、动态调整页、多维度数据切片器、产品龙虎榜；完成前后端联调；运维, CI/CD 测试环境与部署流水线就绪"
+        },
+        {
+          "phase": "UAT",
+          "title": "Regression Test, UAT Defect Fix & Deployment Rehearsal; Verify Module Linkage",
+          "status": "upcoming",
+          "date": "Aug 11, 2026",
+          "description": "回归测试、UAT 问题修复和部署演练；核对主页、详情页、动态调整页、数据切片器、产品龙虎榜的联动结果"
+        }
+      ]
     },
     "opl": [],
     "quotation": {
